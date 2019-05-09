@@ -1,16 +1,50 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500|Poppins:200,400,700|Cabin:400,500,600,700|Heebo:100,300,400,500,700,800,900|Nunito+Sans:200,300,400,600,700,800,900|Heebo:100,300,400,500,700,800,900");
 
 // Define fonts for body and headers
-$body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Raleway", "Helvetica", "sans-serif";
+$body-font: "Heebo", "Helvetica", "sans-serif";
+$headers-font: "Nunito Sans", "Helvetica", "sans-serif";
+$main-font: 'Heebo', sans-serif;
+$main-headers: 'Nunito Sans', sans-serif;
+$main-text: 'Heebo', sans-serif;
 
-// To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+
+p {
+  font-family: 'Heebo', sans-serif;
+  font-size: 14px;
+}
+
+
+a {
+  font-family: 'Heebo', sans-serif;
+  font-size: 12px;
+}

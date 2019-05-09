@@ -1,0 +1,43 @@
+.absCenter {
+  display: flex !important;
+  visibility: visible !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.absCenterSA {
+  display: flex !important;
+  visibility: visible !important;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.absCenterSB {
+  display: flex !important;
+  visibility: visible !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.absCenterColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.absCenterColumnSA {
+  display: flex !important;
+  flex-direction: column;
+  visibility: visible !important;
+  align-items: space-around;
+  justify-content: center;
+}
+
+.absCenterColumnSB {
+  display: flex !important;
+  flex-direction: column;
+  visibility: visible !important;
+  align-items: space-between;
+  justify-content: center;
+}

@@ -1,0 +1,186 @@
+
+
+// // TICKER
+
+
+// .ticker {
+//   display: flex;
+//   overflow: hidden;
+// }
+// .ticker__list {
+//   display: flex;
+//   margin-top: 20px;
+//   animation: ticker 35s infinite linear;
+
+// }
+
+// .ticker:hover .ticker__list {
+//   animation-play-state: paused;
+// }
+// .ticker__item {
+//   margin-right: 20px;
+//   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+//   border-radius: 2px;
+//   overflow: hidden;
+//   width: 500px;
+//   height: 98%;
+
+//   & video {
+//     width: 100%;
+//     height: 100%;
+//   }
+
+//   @include for-phone-only {
+
+//   }
+// }
+// @-moz-keyframes ticker {
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }
+// @-webkit-keyframes ticker {
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }
+// @-o-keyframes ticker {
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }
+// @keyframes ticker {
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }
+
+
+
+
+
+// @mixin button($bcolor,
+// $url,
+// $x1,
+// $y1,
+// $bor,
+// $col) {
+//  background: $bcolor;
+//  -webkit-mask: url($url);
+//  mask: url($url);
+//  -webkit-mask-size: $x1 $y1;
+//  mask-size: $x1 $y1;
+//  border: $bor;
+//  color: $col;
+// }
+
+// .button-container-2 {
+//   border-radius: 1px;
+//  position: relative;
+//  overflow: hidden;
+//  transition: 0.5s;
+//  border-radius: 2px;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//  background-color: white;
+
+
+//  button {
+//   padding: 0;
+
+//   @include button(#000,
+//   "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png",
+//   3000%,
+//   100%,
+//   none,
+//   #fff);
+//   cursor: pointer;
+//   -webkit-animation: ani2 0.7s steps(29) forwards;
+//   animation: ani2 0.7s steps(29) forwards;
+
+//   &:hover {
+//    -webkit-animation: ani 0.7s steps(29) forwards;
+//    animation: ani 0.7s steps(29) forwards;
+//   }
+//  }
+
+// }
+
+
+// .mas {
+//  position: absolute;
+//  color: $light-gray-2;
+//  text-align: left;
+//  width: 100%;
+//  height: 100%;
+//  position: absolute;
+//  overflow: hidden;
+//  padding: 5vh;
+
+//   & h6 {
+//     font-weight: 500;
+//     border-bottom: 1px dotted $black-1;
+//     padding-bottom: 5px;
+//     color: $black-1;
+//   }
+
+//   & p {
+//     font-weight: 300;
+//     font-size: 14px;
+//     line-height: 20px;
+//   }
+
+// }
+
+// @-webkit-keyframes ani {
+//  from {
+//   -webkit-mask-position: 0 0;
+//   mask-position: 0 0;
+//  }
+
+//  to {
+//   -webkit-mask-position: 100% 0;
+//   mask-position: 100% 0;
+//  }
+// }
+
+// @keyframes ani {
+//  from {
+//   -webkit-mask-position: 0 0;
+//   mask-position: 0 0;
+//  }
+
+//  to {
+//   -webkit-mask-position: 100% 0;
+//   mask-position: 100% 0;
+//  }
+// }
+
+// @-webkit-keyframes ani2 {
+//  from {
+//   -webkit-mask-position: 100% 0;
+//   mask-position: 100% 0;
+//  }
+
+//  to {
+//   -webkit-mask-position: 0 0;
+//   mask-position: 0 0;
+//  }
+// }
+
+// @keyframes ani2 {
+//  from {
+//   -webkit-mask-position: 100% 0;
+//   mask-position: 100% 0;
+//  }
+
+//  to {
+//   -webkit-mask-position: 0 0;
+//   mask-position: 0 0;
+//  }
+// }
+
+// a{
+//   color:#00ff95;
+// }

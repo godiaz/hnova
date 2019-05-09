@@ -1,0 +1,11 @@
+.purple-button {
+  background-color: #6E44FF;
+  color: white;
+  transition: 0.2s all ease-in-out;
+  max-width: 600px;
+
+  &:hover {
+    background-color: #5F37E8;
+    color: white;
+  }
+}
