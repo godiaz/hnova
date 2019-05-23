@@ -3,9 +3,23 @@
   color: white;
   transition: 0.2s all ease-in-out;
   max-width: 600px;
+  margin: 10px 0;
 
   &:hover {
     background-color: #5F37E8;
+    color: white;
+  }
+}
+
+.red-button {
+  background-color: #EF626C;
+  color: white;
+  transition: 0.2s all ease-in-out;
+  max-width: 600px;
+  margin: 10px 0;
+
+  &:hover {
+    background-color: #DA5A63;
     color: white;
   }
 }
