@@ -48,27 +48,57 @@
 
 // MEDIA QUERIES
 
+// @mixin for-phone-only {
+//   @media (max-width: 599px) { @content; }
+// }
+// @mixin for-tablet-portrait-up {
+//   @media (min-width: 600px) { @content; }
+// }
+// @mixin for-mobile-bootstrap-down {
+//   @media (max-width: 768px) { @content; }
+// }
+// @mixin for-tablet-landscape-up {
+//   @media (min-width: 900px) { @content; }
+// }
+// @mixin for-tablet-bootstrap-down {
+//   @media (max-width: 992px) { @content; }
+// }
+// @mixin for-desktop-down {
+//   @media (max-width: 1199px) { @content; }
+// }
+
+
+
 @mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
+  @media ( min-width: 20em ) and ( max-width: 38em ) { @content; }
 }
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
+
+@mixin for-tablet {
+  @media ( min-width: 37.6em ) and ( max-width: 48em ) { @content; }
 }
-@mixin for-mobile-bootstrap-down {
-  @media (max-width: 768px) { @content; }
+
+@mixin for-tablet-landscape {
+  @media ( min-width: 48.1em ) and ( max-width: 62em ) { @content; }
 }
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) { @content; }
+
+@mixin for-desktop-lowres {
+  @media ( min-width: 62.1em ) and ( max-width: 64.063em ) { @content; }
 }
-@mixin for-tablet-bootstrap-down {
-  @media (max-width: 992px) { @content; }
+
+@mixin for-desktop {
+  @media ( min-width: 64.1em ) and ( max-width: 75em ) { @content; }
 }
-@mixin for-desktop-down {
-  @media (max-width: 1199px) { @content; }
+
+@mixin for-desktop-15 {
+  @media ( min-width: 75.1em ) and ( max-width: 93.75em ) { @content; }
 }
-@mixin for-desktop-up {
-  @media (min-width: 1200px) { @content; }
+
+@mixin for-imac {
+  @media ( min-width: 93.8em) and ( max-width: 112.5em ) { @content; }
 }
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
+
+@mixin for-imac-up {
+  @media ( min-width: 112.6em) { @content; }
 }
+
+

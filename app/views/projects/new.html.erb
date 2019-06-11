@@ -1,0 +1,9 @@
+
+<div class="new-project">
+  <h1>Add a Project</h1>
+  <%= simple_form_for(@project) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.submit %>
+  <% end %>
+</div>

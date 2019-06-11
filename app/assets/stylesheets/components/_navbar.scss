@@ -1,30 +1,100 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+#main {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+.navbar {
+  @include absCenterSB;
+  border-bottom: 1px solid #E4E8EA;
+  background-color: $color-3-lighter;
+  height: 50px;
+  transition: 0.4s;
 
-.navbar-lewagon .navbar-brand img {
-  width: 150px;
-}
-
-.nav-link {
-
-}
-
-
-.navbar-nav {
-  width: 100%;
-}
-
-.fa-caret-square-down {
-  font-size: 28px;
-  margin: 0 20px;
-
-  @include for-phone-only {
-    margin: 0;
+  a {
+    text-decoration: none;
   }
+
+  h1 {
+    font-family: $title;
+    font-size: 22px;
+    margin: 0;
+    color: #3F4447;
+  }
+
+  button {
+    border: none;
+    background-color: #F2F4F4;
+    font-family: 'Nunito-Sans', sans-serif;
+    font-weight: 300;
+    // border-right: 1px solid #898989;xs
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  i {
+    color: #3F4447;
+    padding: 0 10px;
+  }
+}
+
+
+.sidenav {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  z-index: 1000;
+  background-color: $color-3-lighter;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+  border-right: 1px solid #E4E8EA;
+}
+
+.sidenav a {
+  padding: 12px 8px 12px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #3F4447;
+  display: block;
+  transition: 0.3s;
+  font-family: $nunito;
+  font-weight: 300;
+  border-top: 1px solid #E4E8EA;
+}
+
+.sidenav a:nth-child(2) {
+  font-weight: 400;
+  color: $color-1-dark;
+}
+
+.sidebar-links {
+  &:hover {
+    background-color: white;
+    transition: 0.5s all ease-in-out;
+  }
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 26px;
+  margin-left: 50px;
+
+  &:hover {
+    color: $color-3-light;
+  }
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

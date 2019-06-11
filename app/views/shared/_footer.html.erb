@@ -1,3 +1,8 @@
+<div class="newsletter">
+  <p>Subscribe to Our Newsletter</p>
+  <input type="text" placeholder="Email Address">
+  <input type="button" value="Submit" onclick="msg()">
+</div>
 <footer class="footer fixed-bottom">
   <h4>Building Digital Products will never be the same.</h4>
   <div class="footer_content">
@@ -17,9 +22,14 @@
     </div>
   </div>
   <div class="footer_bottom">
-    <a class="margin-0" href="#">Privacy</a>
-    <a class="margin-0" href="#">Terms & Conditions</a>
-    <p class="margin-0">Hoxton Digital Ltd 2019 - All Rights Reserved</p>
+    <a class="margin-0" href="/privacy">Privacy</a>
+    <a class="margin-0" href="/terms_and_conditions">Terms & Conditions</a>
+    <p class="margin-0">Hoxton Digital Ltd <i class="far fa-copyright"></i> 2019 - All Rights Reserved</p>
   </div>
 </footer>
 
+<script>
+  function msg() {
+    alert('Email Registered')
+  }
+</script>

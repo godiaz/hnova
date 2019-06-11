@@ -1,1 +1,192 @@
 // Specific CSS for your home-page
+
+.home-1 {
+  position: relative;
+
+  &_background {
+    background-image: asset-url('clutch.png');
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    transition: 0.5s;
+
+    &:hover {
+      transition: 0.5s;
+      filter: brightness(80%);
+    }
+
+    @include for-phone-only {
+      height: 620px;
+      background-image: asset-url('clutch-mobile.png');
+    }
+
+    @include for-desktop-lowres {
+      height: 400px;
+    }
+
+    @include for-desktop {
+      height: 400px;
+      background-position: bottom;
+    }
+
+    @include for-desktop-15 {
+      height: 450px;
+      background-position: bottom;
+    }
+
+    @include for-imac {
+      height: 550px;
+      background-position: bottom;
+    }
+
+    @include for-imac-up {
+      height: 890px;
+      background-position: bottom;
+    }
+
+  }
+
+}
+
+.home-icon {
+  // position: absolute;
+  //   bottom: 20px;
+  //   right: 30px;
+  padding: 15px;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  border: 1px solid white;
+  border-radius: 50px;
+  box-shadow: 1px 2px 1px rgba(0,0,0,0.2);
+  transition: 0.3s;
+
+  &:hover {
+    color: $color-1-light;
+    border: 1px solid $color-1-light;
+    transition: 0.3s;
+  }
+}
+
+
+
+.navigation {
+
+  &_checkbox {
+    position: absolute;
+      top: 30px;
+      right: 30px;
+    display: none;
+    z-index: 2000;
+  }
+
+  &_button {
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+      top: 30px;
+      right: 30px;
+    border-radius: 50%;
+    @include absCenter;
+
+    & i {
+      font-size: 16px;
+      color: white;
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 50%;
+      transition: 0.5s;
+
+      &:hover {
+        color: $color-1-lightest;
+        transition: 0.5s;
+        border: 1px solid $color-1-lightest;
+      }
+    }
+
+  }
+
+  &_list {
+    list-style-type: none;
+    position: absolute;
+      top: 70px;
+      right: 25px;
+
+    & li {
+      opacity: 0;
+      transition: 1s;
+      transform: scale(0.1);
+    }
+
+    & li:nth-child(1) {
+      transition-delay: 0.45s;
+    }
+
+    & li:nth-child(2) {
+      transition-delay: 0.35s;
+    }
+
+    & li:nth-child(3) {
+      transition-delay: 0.25s;
+    }
+
+    & li:nth-child(4) {
+      transition-delay: 0.15s;
+    }
+  }
+
+  &_link {
+    @include absCenter;
+    margin: 10px 0;
+    transform: translateY(0px);
+
+
+    & i {
+      border: 1px solid white;
+      color: white;
+      background-color: transparent;
+      border-radius: 50%;
+      padding: 10px;
+      font-size: 18px;
+
+      &:hover {
+        color: $color-1-lightest;
+        transition: 0.5s;
+        border: 1px solid $color-1-lightest;
+      }
+    }
+  }
+
+  &_checkbox:checked ~ &_list {
+
+    & li {
+      opacity: 1;
+      transform: scale(0.9);
+      transition: 0.8s;
+    }
+
+    & li:nth-child(1) {
+      transition-delay: 0.10s;
+    }
+
+    & li:nth-child(2) {
+      transition-delay: 0.20s;
+    }
+
+    & li:nth-child(3) {
+      transition-delay: 0.30s;
+    }
+
+    & li:nth-child(4) {
+      transition-delay: 0.40s;
+    }
+
+  }
+
+  &_checkbox:checked ~ &_link {
+  }
+
+
+
+}
