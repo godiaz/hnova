@@ -194,9 +194,10 @@
 
     @include for-phone-only {
       flex-direction: column;
+      justify-content: center;
 
       &_text {
-        width: 65vw;
+        width: 75vw;
         height: auto;
         max-height: 400px;
 
@@ -211,20 +212,12 @@
       }
 
       &_image {
-        height: 60vh;
+        height: 300px;
         min-height: 300px;
-        width: 60vh;
+        width: 300px;
+        margin: 10px 0;
       }
     }
 
   }
-
-  &_content:last-child {
-
-    &_image:nth-child(2) {
-      background-image: url('https://images.pexels.com/photos/1448136/pexels-photo-1448136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    }
-  }
-
-
 }
