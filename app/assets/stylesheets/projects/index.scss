@@ -6,19 +6,144 @@
     background-color: white;
   }
 
-  &_cards {
+  &_container {
+    width: 100%;
     display: flex;
-    align-self: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    min-height: 80vh;
+    justify-content: center;
+    background-color: $color-3-lighter;
     padding: 40px;
   }
 
+  &_cards {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    background-color: $color-3-lighter;
+    min-width: 1570px;
+    max-width: 1570px;
+
+    @include for-xlarge-devices-down {
+      min-width: 80vw;
+      max-width: 1400px;
+    }
+
+    @include for-large-devices-down {
+      justify-content: center;
+    }
+
+    & a {
+      color: $color-5;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
   &_card {
-    height: 30vh;
-    width: 30vw;
+    min-height: 380px;
+    height: 28vh;
+    width: 350px;
     background-color: white;
     margin: 20px;
+    overflow: hidden;
+
+    &_image {
+      overflow: hidden;
+
+      & img {
+        width: 100%;
+        height: 50vh;
+        max-height: 290px;
+        background-size: contain;
+        filter: brightness(80%);
+        transition: 0.5s;
+
+        &:hover {
+          transform: scale(1.08);
+          overflow: hidden;
+          filter: brightness(90%);
+        }
+      }
+    }
+
+    &_content {
+      padding: 20px;
+
+      & h6 {
+        height: 20px;
+        font-weight: 600;
+        width: 100%;
+        margin-bottom: 5px;
+        color: $color-5;
+      }
+
+    &_description {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      height: 30px;
+
+      & p {
+        height: 30px;
+        font-size: 14px;
+        font-weight: 300;
+        color: $color-5;
+        margin: 0;
+      }
+
+      & p:last-child {
+        color: white;
+        padding: 5px 10px;
+        background-color: $color-1;
+        border-radius: 50px;
+        margin-bottom: 5px;
+      }
+    }
+
+    }
+
+    @include for-xlarge-devices-down {
+      width: 28vw;
+      height: 380px;
+
+      &_image {
+
+        & img {
+          width: 100%;
+          height: 50vh;
+          max-height: 300px;
+        }
+
+      }
+    }
+
+    @include for-large-devices-down {
+      width: 42vw;
+      height: 430px;
+
+      &_image {
+
+        & img {
+          width: 100%;
+          height: 50vh;
+          max-height: 340px;
+        }
+
+      }
+    }
+
+    @include for-medium-devices-down {
+      width: 45vw;
+    }
+
+    @include for-small-devices-down {
+      width: 450px;
+      height: 440px;
+    }
+
+    @include for-phone-only {
+      width: 80vw;
+      height: 430px;
+    }
   }
 }

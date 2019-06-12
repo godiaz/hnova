@@ -1,2 +1,11 @@
 
 <h1>Edit Project</h1>
+<div class="new-project">
+  <%= simple_form_for(@project) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :project_type %>
+      <%= f.input :images, as: :file, input_html: { multiple: true } %>
+      <%= f.submit %>
+  <% end %>
+</div>

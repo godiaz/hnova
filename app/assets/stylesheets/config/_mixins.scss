@@ -1,9 +1,8 @@
-
-
 // ORIENTATION
 
 @mixin absCenter {
-  display: flex;
+  display: flex !important;
+  visibility: visible !important;
   justify-content: center;
   align-items: center;
 }
@@ -45,60 +44,56 @@
   justify-content: center;
 }
 
-
-// MEDIA QUERIES
-
-// @mixin for-phone-only {
-//   @media (max-width: 599px) { @content; }
-// }
-// @mixin for-tablet-portrait-up {
-//   @media (min-width: 600px) { @content; }
-// }
-// @mixin for-mobile-bootstrap-down {
-//   @media (max-width: 768px) { @content; }
-// }
-// @mixin for-tablet-landscape-up {
-//   @media (min-width: 900px) { @content; }
-// }
-// @mixin for-tablet-bootstrap-down {
-//   @media (max-width: 992px) { @content; }
-// }
-// @mixin for-desktop-down {
-//   @media (max-width: 1199px) { @content; }
-// }
-
-
+// BOOTSTRAP MEDIA QUERIES WEB FIRST
 
 @mixin for-phone-only {
-  @media ( min-width: 20em ) and ( max-width: 38em ) { @content; }
+  @media (max-width: 575.98px) { @content; }
 }
 
-@mixin for-tablet {
-  @media ( min-width: 37.6em ) and ( max-width: 48em ) { @content; }
+@mixin for-small-devices-down {
+  @media (max-width: 767.98px) { @content; }
 }
 
-@mixin for-tablet-landscape {
-  @media ( min-width: 48.1em ) and ( max-width: 62em ) { @content; }
+@mixin for-medium-devices-down {
+  @media (max-width: 991.98px) { @content; }
 }
 
-@mixin for-desktop-lowres {
-  @media ( min-width: 62.1em ) and ( max-width: 64.063em ) { @content; }
+@mixin for-large-devices-down {
+  @media (max-width: 1199.98px) { @content; }
 }
 
-@mixin for-desktop {
-  @media ( min-width: 64.1em ) and ( max-width: 75em ) { @content; }
-}
-
-@mixin for-desktop-15 {
-  @media ( min-width: 75.1em ) and ( max-width: 93.75em ) { @content; }
-}
-
-@mixin for-imac {
-  @media ( min-width: 93.8em) and ( max-width: 112.5em ) { @content; }
-}
-
-@mixin for-imac-up {
-  @media ( min-width: 112.6em) { @content; }
+@mixin for-xlarge-devices-down {
+  @media (max-width: 1499.98px) { @content; }
 }
 
 
+// BOOTSTRAP MEDIA QUERIES MOBILE FIRST
+
+@mixin for-small-devices-up {
+  @media (min-width: 576px) { @content; }
+}
+
+@mixin for-medium-devices-up {
+  @media (min-width: 768px) { @content; }
+}
+
+@mixin for-large-devices-up {
+  @media (min-width: 992px) { @content; }
+}
+
+@mixin for-xlarge-devices-up {
+  @media (min-width: 1200px) { @content; }
+}
+
+@mixin for-1500 {
+  @media (min-width: 1499px) { @content; }
+}
+
+
+@mixin for-1800 {
+  @media (min-width: 1799px) { @content; }
+}
+
+@mixin for-xxlarge-devices-up {
+  @media (min-width: 1500px) { @content; }
+}

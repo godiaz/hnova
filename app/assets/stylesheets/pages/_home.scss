@@ -9,41 +9,12 @@
     width: 100%;
     background-size: cover;
     transition: 0.5s;
+    filter: brightness(80%);
 
     &:hover {
       transition: 0.5s;
-      filter: brightness(80%);
+      filter: brightness(70%);
     }
-
-    @include for-phone-only {
-      height: 620px;
-      background-image: asset-url('clutch-mobile.png');
-    }
-
-    @include for-desktop-lowres {
-      height: 400px;
-    }
-
-    @include for-desktop {
-      height: 400px;
-      background-position: bottom;
-    }
-
-    @include for-desktop-15 {
-      height: 450px;
-      background-position: bottom;
-    }
-
-    @include for-imac {
-      height: 550px;
-      background-position: bottom;
-    }
-
-    @include for-imac-up {
-      height: 890px;
-      background-position: bottom;
-    }
-
   }
 
 }

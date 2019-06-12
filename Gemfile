@@ -19,7 +19,7 @@ gem 'webpacker'
 
 # NEW GEMS
 gem 'cloudinary'
-gem "mini_magick"
+gem 'mini_magick'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

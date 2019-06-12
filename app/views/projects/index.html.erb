@@ -2,13 +2,24 @@
   <div class="projects-index_filters">
 
   </div>
-  <div class="projects-index_cards">
-    <% @projects.each do |project| %>
-      <%= link_to project_path(project) do %>
-        <div class="projects-index_card">
-          <%= project.title %>
-        </div>
+  <div class="projects-index_container">
+    <div class="projects-index_cards">
+      <% @projects.each do |project| %>
+        <%= link_to project_path(project) do %>
+          <div class="projects-index_card">
+            <div class="projects-index_card_image">
+              <%= image_tag project.images.first %>
+            </div>
+            <div class="projects-index_card_content">
+              <h6><%= project.title %></h6>
+              <div class="projects-index_card_content_description">
+                <p>Project Type:</p>
+                <p><%= project.project_type %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>

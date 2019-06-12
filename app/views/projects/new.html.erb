@@ -4,6 +4,7 @@
   <%= simple_form_for(@project) do |f| %>
       <%= f.input :title %>
       <%= f.input :description %>
+      <%= f.input :images, as: :file, input_html: { multiple: true } %>
       <%= f.submit %>
   <% end %>
 </div>

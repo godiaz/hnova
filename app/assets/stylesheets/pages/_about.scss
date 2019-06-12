@@ -34,51 +34,5 @@
     height: 600px;
   }
 
-  &_content {
-    padding: 40px;
 
-    &_part-one {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-
-      &_text {
-
-        h6 {
-          font-weight: 600;
-          font-size: 20px;
-          padding-bottom: 10px;
-          border-bottom: solid 4px $color-5;
-          color: $color-5;
-          width: 100px;
-          margin-bottom: 15px;
-        }
-
-        p {
-          font-size: 16px;
-          font-weight: 300;
-          line-height: 30px;
-        }
-      }
-
-      &_image:nth-child(2) {
-        width: 70vw;
-        height: 50vh;
-        margin: 0 10px 10px 10px;
-        max-width: 600px;
-        background-image: url('https://images.pexels.com/photos/2102332/pexels-photo-2102332.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260');
-        background-size: cover;
-      }
-
-      &_image:nth-child(3) {
-        width: 70vw;
-        height: 50vh;
-        margin: 0 10px 10px 10px;
-        max-width: 600px;
-        background-image: url('https://images.pexels.com/photos/343717/pexels-photo-343717.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-        background-size: cover;
-      }
-
-    }
-  }
 }
