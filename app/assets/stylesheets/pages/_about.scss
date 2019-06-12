@@ -195,6 +195,7 @@
     @include for-phone-only {
       flex-direction: column;
       justify-content: center;
+      align-items: center;
 
       &_text {
         width: 75vw;
