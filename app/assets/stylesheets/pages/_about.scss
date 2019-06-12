@@ -24,6 +24,12 @@
       line-height: 30px;
       margin-top: 30px;
     }
+
+    @include for-phone-only {
+      & h4 {
+        font-size: 40px;
+      }
+    }
   }
 
   &_banner {
@@ -200,7 +206,8 @@
       &_text {
         width: 75vw;
         height: auto;
-        max-height: 400px;
+        max-height: 500px;
+        margin-bottom: 20px;
 
         & h6 {
           font-size: 36px;
@@ -215,7 +222,8 @@
       &_image {
         height: 300px;
         min-height: 300px;
-        width: 300px;
+        min-width: 300px;
+        width: 80vw;
         margin: 10px 0;
       }
     }
