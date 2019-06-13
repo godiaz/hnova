@@ -25,13 +25,17 @@
     <div class="projects-show_content_headers">
       <a href="#about">About</a>
       <a href="#images">Images</a>
-      <a href="#">Reviews</a>
+<!--       <a href="#">Reviews</a> -->
     </div>
     <div class="projects-show_content_everything">
       <div class="projects-show_content_everything_text">
         <hr align="left"><br>
         <h5>Objective</h5>
         <h6 id="about"><%= @project.objective %></h6>
+        <br><br><br><br>
+        <hr align="left"><br>
+        <h5>Technology</h5>
+        <h6 id="about"><%= @project.technology %></h6>
       </div>
       <div id="images" class="projects-show_content_everything_images">
         <% @project.images.first(4).each do |image| %>
