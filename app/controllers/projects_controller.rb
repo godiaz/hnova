@@ -20,6 +20,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
+
     if @project.update(project_params)
       redirect_to project_path(@project)
     else
@@ -36,7 +37,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :project_type, images:[])
+    projectParams = params.require(:project).permit(:title, :description, :objective, :project_type, :url, :programming_language, components:[], images:[])
   end
 
   def set_project

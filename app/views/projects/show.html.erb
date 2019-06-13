@@ -1,8 +1,54 @@
-<h2> <%= @project.title %> </h2>
-<p> <%= @project.description %></p>
-<p> <%= @project.project_type %></p>
-<% @project.images.each do |image| %>
-  <%= image_tag image %>
-<% end %>
+<div class="projects-show">
+  <div class="projects-show_banner">
+    <%= image_tag @project.images.first %>
+    <div class="projects-show_banner_content">
+      <h1> <%= @project.title %> </h1>
+      <p> <%= @project.description %></p>
+      <p>Programming Language: <span><%= @project.programming_language %></span></p>
+      <p> <%= link_to "Visit Website", "#{@project.url}" %></p>
 
-<%= image_tag @project.images.first %>
+    </div>
+  </div>
+  <div class="projects-show_components">
+    <h5>Some of the components used in this project:</h5>
+    <div class="projects-show_components_tags">
+      <% if @project.components %>
+        <% @project.components.split(/\W+/).each do |word| %>
+          <% if word.present? %>
+            <span><%= word %></span>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="projects-show_content">
+    <div class="projects-show_content_headers">
+      <a href="#">About</a>
+      <a href="#">Images</a>
+      <a href="#">Reviews</a>
+    </div>
+    <div class="projects-show_content_everything">
+      <div class="projects-show_content_everything_text">
+        <hr align="left"><br>
+        <h5>Objective</h5>
+        <h6><%= @project.objective %></h6>
+      </div>
+      <div class="projects-show_content_everything_images">
+        <% @project.images.first(4).each do |image| %>
+          <%= image_tag image %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--
+
+<p> <%= @project.project_type %></p>
+<%# @project.images.each do |image| %>
+  <%#= image_tag image %>
+<%# end %>
+ -->
