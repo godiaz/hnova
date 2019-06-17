@@ -1,1 +1,31 @@
-<h1>Contact Page</h1>
+<div class="contact">
+  <hr align="center">
+  <h6>DROP US A LINE!</h6>
+  <h4>Our customer service team is ready for your queries</h4>
+  <div class="contact_container">
+    <form action="https://formspree.io/contact@hoxton-digital.com" method="POST">
+
+      <div class="form_name">
+        <label for="name">Name: *</label>
+        <input type="text" name="name">
+      </div>
+
+      <div class="form_email">
+        <label for="email">Email: *</label>
+        <input type="email" name="_replyto">
+      </div>
+
+      <div class="form_message">
+        <label for="message">Message: *</label>
+        <textarea name="message" placeholder=""></textarea>
+      </div>
+
+
+<!--       <input type="file" name="attachment" accept="image/png, image/jpeg"> -->
+
+      <input type="hidden" name="_next" value="https://www.hoxton-digital.com/thanks.html"/>
+
+      <input type="submit" value="Send" class="form-button">
+    </form>
+  </div>
+</div>

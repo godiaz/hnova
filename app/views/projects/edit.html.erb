@@ -13,7 +13,10 @@
       <%= f.input :components, input_html: { multiple: true }, as: :check_boxes, collection: %w(MobileApp WebApp Website SEO Mixins Devise SimpleForm Bundler WebPack ZoomHero ParallaxScrolling Stripe PaypalSDK Bootstrap SCSSNesting PolymorphicDatabase Pundit AJAX PostMark MailChimp Trix WYSIWYG KeyFrameAnimations RequestAnimationFrame), class: "form-radio-boxes", include_blank: false %>
       <%= f.input :images, as: :file, input_html: { multiple: true } %>
 
-
+      <% if @project.images.attached? %>
+        <%= f.label :remove_image %>
+        <%= f.check_box :remove_image %>
+      <% end %>
 
       <%= f.submit %>
   <% end %>

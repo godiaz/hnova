@@ -4,8 +4,8 @@
   position: relative;
 
   &_background {
-    background-image: asset-url('clutch.png');
-    height: 400px;
+    background-image: url('https://images.pexels.com/photos/326468/pexels-photo-326468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    height: 700px;
     width: 100%;
     background-size: cover;
     transition: 0.5s;
@@ -15,8 +15,19 @@
       transition: 0.5s;
       filter: brightness(70%);
     }
-  }
 
+    @include for-xlarge-devices-down {
+      height: 600px;
+    }
+
+    @include for-large-devices-down {
+      height: 500px;
+    }
+
+    @include for-phone-only {
+      background-image: url('https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940');
+    }
+  }
 }
 
 .home-icon {
@@ -38,8 +49,6 @@
     transition: 0.3s;
   }
 }
-
-
 
 .navigation {
 
@@ -157,7 +166,139 @@
 
   &_checkbox:checked ~ &_link {
   }
+}
 
+//second section called home-2
 
+.home-2 {
+
+  &_content {
+    width: 80%;
+  }
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 40px;
+
+  & h4 {
+    font-weight: 200;
+    text-align: left;
+    margin-bottom: 30px;
+
+    & span {
+      font-family: $nunito;
+      color: $color-1;
+      font-weight: 600;
+    }
+  }
+
+  &_services-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_card {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    margin-right: 20px;
+  }
+
+  @include for-xxlarge-devices-down {
+    &_content {
+      width: 90vw;
+    }
+
+    &_card {
+      height: 350px;
+    }
+  }
+
+  @include for-xlarge-devices-down {
+
+    & h4 {
+      font-size: 20px;
+    }
+
+    &_content {
+      width: 90vw;
+    }
+
+    &_card {
+      height: 350px;
+    }
+
+    &_card:last-child {
+      display: none;
+    }
+  }
+
+  @include for-large-devices-down {
+
+    & h4 {
+      font-size: 20px;
+    }
+
+    &_content {
+      width: 90vw;
+    }
+
+    &_card {
+      height: 450px;
+      width: 450px;
+    }
+
+    &_card:nth-child(1) {
+      display: none;
+    }
+
+    &_card:last-child {
+      display: none;
+    }
+  }
+
+  @include for-medium-devices-down {
+
+    & h4 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &_services-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &_content {
+      width: 95vw;
+    }
+
+    &_card {
+      height: 600px;
+      width: 600px;
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+
+    &_card:nth-child(1) {
+      display: inline-block;
+    }
+
+    &_card:last-child {
+      display: none;
+    }
+  }
+
+  @include for-phone-only {
+
+    &_card {
+      height: 350px;
+      width: 100%;
+    }
+  }
 
 }

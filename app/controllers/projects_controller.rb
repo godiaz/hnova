@@ -37,7 +37,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    projectParams = params.require(:project).permit(:title, :description, :objective, :technology, :project_type, :url, :programming_language, components:[], images:[])
+    projectParams = params.require(:project).permit(:title, :description, :remove_image, :objective, :technology, :project_type, :url, :programming_language, components:[], images:[])
   end
 
   def set_project

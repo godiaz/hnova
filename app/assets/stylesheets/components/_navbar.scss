@@ -41,6 +41,12 @@
     color: #3F4447;
     padding: 0 10px;
   }
+
+  @include for-phone-only {
+    & span {
+      display: none;
+    }
+  }
 }
 
 

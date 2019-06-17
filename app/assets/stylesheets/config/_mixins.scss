@@ -66,6 +66,10 @@
   @media (max-width: 1499.98px) { @content; }
 }
 
+@mixin for-xxlarge-devices-down {
+  @media (max-width: 1799.98px) { @content; }
+}
+
 
 // BOOTSTRAP MEDIA QUERIES MOBILE FIRST
 

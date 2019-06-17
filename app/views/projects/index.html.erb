@@ -8,7 +8,11 @@
         <%= link_to project_path(project) do %>
           <div class="projects-index_card">
             <div class="projects-index_card_image">
-              <%= image_tag project.images.first %>
+              <% if project.images.attached? %>
+                <%= image_tag project.images.first %>
+              <% else %>
+                <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
+              <% end %>
             </div>
             <div class="projects-index_card_content">
               <h6><%= project.title %></h6>
