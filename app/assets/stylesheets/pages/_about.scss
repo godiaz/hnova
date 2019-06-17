@@ -151,7 +151,7 @@
     @include for-medium-devices-down {
 
       &_text {
-        width: 45vw;
+        width: 50vw;
         height: auto;
         max-height: 400px;
         margin-right: 20px;
@@ -192,9 +192,9 @@
       }
 
       &_image {
-        height: 70vh;
+        height: 60vh;
         min-height: 400px;
-        width: 80vh;
+        width: 60vh;
       }
     }
 

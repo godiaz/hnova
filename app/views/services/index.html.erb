@@ -1,0 +1,30 @@
+<div class="services-banner">
+  <div class="services-banner_background">
+  </div>
+  <h2>Our Services</h2>
+</div>
+<div class="services-container">
+  <% @services.each do |service| %>
+    <div class="services-index_card">
+      <div class="services-index_card_image">
+        <% if service.images.attached? %>
+          <%= image_tag service.images.first %>
+        <% else %>
+          <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
+        <% end %>
+      </div>
+      <div class="services-index_card_content">
+        <hr align="left">
+        <span>SERVICE NAME</span>
+        <h6><%= service.title %></h6>
+        <p><%= service.description %></p>
+        <%= link_to service.url do %>
+          <button>More Info.</button>
+        <% end %>
+        <%= link_to contact_path do %>
+          <button class="button-transparent">Contact Our Team</button>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -16,6 +16,10 @@
     text-decoration: none;
   }
 
+  &_search {
+    display: inline-block;
+  }
+
   h1 {
     width: 100%;
     font-family: $title;
@@ -46,6 +50,9 @@
     & span {
       display: none;
     }
+  }
+
+  @include for-small-phone-only {
   }
 }
 

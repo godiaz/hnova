@@ -1,0 +1,11 @@
+
+<div class="service-form">
+  <h1>Add a Service</h1>
+  <%= simple_form_for(@service) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :url %>
+      <%= f.input :images, as: :file, input_html: { multiple: true } %>
+      <%= f.submit %>
+  <% end %>
+</div>
