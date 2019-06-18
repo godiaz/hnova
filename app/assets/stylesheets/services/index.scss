@@ -15,6 +15,7 @@
 
   &_background {
     background-image: url('https://images.pexels.com/photos/1161542/pexels-photo-1161542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-position: center bottom;
     height: 700px;
     width: 100%;
     background-size: cover;
@@ -31,7 +32,8 @@
     }
 
     @include for-phone-only {
-      background-image: url('https://images.pexels.com/photos/2249958/pexels-photo-2249958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+      background-image: url('https://images.pexels.com/photos/1161542/pexels-photo-1161542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+      background-position: center;
     }
   }
 }

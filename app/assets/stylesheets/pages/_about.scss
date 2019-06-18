@@ -1,4 +1,5 @@
 .about {
+  background-color: $color-3-lighter;
 
   &_header {
     padding: 40px;
@@ -33,7 +34,7 @@
   }
 
   &_banner {
-    background-color: gray;
+    background-color: $color-3-lighter;
     background-image: asset-url('hoxton-digital-premises.png');
     background-size: cover;
     width: 100%;

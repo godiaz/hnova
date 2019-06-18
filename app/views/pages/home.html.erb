@@ -1,8 +1,6 @@
 
   <div class="home-1">
-    <a href="https://clutch.co/profile/hoxton-digital">
-      <div class="home-1_background"></div>
-    </a>
+    <div class="home-1_background"></div>
     <input type="checkbox" class="navigation_checkbox" id="navi-toggle">
     <label for="navi-toggle" class="navigation_button">
       <i class="fas fa-share-alt"></i>
@@ -47,6 +45,7 @@
             <% else %>
               <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
             <% end %>
+            <h6><%= service.title %></h6>
           </div>
         <% end %>
       </div>
@@ -118,4 +117,5 @@
       </div>
     </div>
   </div>
+
   <script src="https://apis.google.com/js/platform.js" async defer></script>

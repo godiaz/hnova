@@ -4,7 +4,7 @@
   position: relative;
 
   &_background {
-    background-image: url('https://images.pexels.com/photos/326468/pexels-photo-326468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-image: url('https://images.pexels.com/photos/2457284/pexels-photo-2457284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     height: 700px;
     width: 100%;
     background-size: cover;
@@ -209,7 +209,7 @@
 
     & img {
       width: 100%;
-      height: 100%;
+      height: 80%;
     }
 
     & hr {
@@ -691,6 +691,7 @@
       border-radius: 1px;
       padding: 0 20px;
       position: relative;
+      box-shadow: 1px 3px 2px rgba(0,0,0,0.3);
 
       & img:nth-child(1) {
         height: 40px;
@@ -751,6 +752,11 @@
 
       &_card {
         width: 30%;
+        height: 370px;
+
+        & h5 {
+          line-height: 30px;
+        }
       }
     }
 
@@ -774,8 +780,8 @@
       width: 85vw;
       padding: 100px 80px;
 
-      & h5 {
-        line-height: 55px;
+      & h5:first-child {
+        line-height: 65px;
       }
 
       &_container {
@@ -831,10 +837,11 @@
       &_card {
         margin-top: 10px;
         margin-right: 10px;
-        max-width: 300px;
+        max-width: 350px;
 
         & h5 {
           font-size: 18px;
+          font-weight: 300;
         }
       }
     }
