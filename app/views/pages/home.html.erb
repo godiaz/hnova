@@ -40,45 +40,80 @@
             <button>Right Here</button>
           <% end %>
         </div>
-        <div class="home-2_card">
-          <% if @services.first.images.attached? %>
-            <%= image_tag @services.first.images.first %>
-          <% else %>
-            <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
-          <% end %>
-        </div>
-        <div class="home-2_card">
-          <% if @services.second.images.attached? %>
-            <%= image_tag @services.second.images.first %>
-          <% else %>
-            <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
-          <% end %>
-        </div>
-        <div class="home-2_card">
-          <% if @services.third.images.attached? %>
-          <%= image_tag @services.third.images.first %>
-          <% else %>
-            <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
-          <% end %>
-        </div>
+        <% @services.first(3).each do |service|  %>
+          <div class="home-2_card">
+            <% if service.images.attached? %>
+              <%= image_tag service.images.first %>
+            <% else %>
+              <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
-  <div class="home-2">
-    <div class="home-2_content">
+  <div class="home-3">
+    <div class="home-3_content">
       <h4><span>Products</span> that we have proudly built!</h4>
-      <div class="home-2_services-container">
-        <div class="home-2_card">
-
+      <div class="home-3_services-container">
+        <% @projects.first(4).each do |project|  %>
+          <div class="home-3_card">
+            <div class="home-3_card_image">
+              <% if project.images.attached? %>
+                <%= image_tag project.images.first %>
+              <% else %>
+                <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
+              <% end %>
+            </div>
+            <div class="home-3_card_content">
+              <p><%= project.title %></p>
+              <span><%= project.project_type %></span>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="home-4">
+    <div class="home-4_reviews">
+      <hr align="left">
+      <p>REVIEWS</p>
+      <h5>What People Say About Us</h5>
+      <h6>Find out what some of our customers have to say about us.</h6>
+      <%= link_to 'https://clutch.co/profile/hoxton-digital' do %>
+        <button class="home-4_reviews_button-1">All Reviews</button>
+      <% end %>
+      <%= link_to 'https://clutch.co/review' do %>
+        <button class="home-4_reviews_button-2">Leave Review</button>
+      <% end %>
+      <div class="home-4_reviews_container">
+        <div class="home-4_reviews_card">
+          <%= cl_image_tag("clutch.png", :quality=>"auto") %>
+          <%= cl_image_tag("quotes.png", :quality=>"auto") %>
+          <h5>They’re incredibly willing to iterate on the output.</h5>
+          <h6>Stotles </h6>
+          <p>Co-Founder</p>
         </div>
-        <div class="home-2_card">
-
+        <div class="home-4_reviews_card">
+          <%= cl_image_tag("clutch.png", :quality=>"auto") %>
+          <%= cl_image_tag("quotes.png", :quality=>"auto") %>
+          <h5>Hoxton Digital is so passionate about the work. They really believe in my idea.</h5>
+          <h6>BuildSG</h6>
+          <p>Owner</p>
         </div>
-        <div class="home-2_card">
-
+        <div class="home-4_reviews_card">
+          <%= cl_image_tag("clutch.png", :quality=>"auto") %>
+          <%= cl_image_tag("quotes.png", :quality=>"auto") %>
+          <h5>Hoxton Digital thinks about the challenges we wish to solve and brainstorms new ideas to improve on ours.</h5>
+          <h6>Down To Play</h6>
+          <p>Co-Founder</p>
         </div>
-        <div class="home-2_card">
-
+        <div class="home-4_reviews_card">
+          <%= cl_image_tag("clutch.png", :quality=>"auto") %>
+          <%= cl_image_tag("quotes.png", :quality=>"auto") %>
+          <h5>The website they developed streamlined internal processes and helped attract more clients</h5>
+          <h6>SERDRAGA</h6>
+          <p>CFO</p>
         </div>
       </div>
     </div>

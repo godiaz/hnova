@@ -221,10 +221,14 @@
 
       &_image {
         height: 300px;
-        min-height: 300px;
+        min-height: 370px;
         min-width: 300px;
         width: 80vw;
         margin: 10px 0;
+      }
+
+      &_image:nth-child(3) {
+        background-position: center;
       }
     }
 
