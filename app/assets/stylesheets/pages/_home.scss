@@ -462,10 +462,17 @@
       align-items: center;
       padding: 20px;
 
-      & p {
+      & p, a {
         margin-bottom: 0;
         color: $color-5;
         font-weight: 300;
+        font-size: 14px;
+        transition: 0.3s;
+
+        &:hover {
+          text-decoration: none;
+          color: $color-1;
+        }
       }
 
       & span {
