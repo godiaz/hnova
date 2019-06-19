@@ -39,6 +39,7 @@
           <% end %>
         </div>
         <% @services.first(3).each do |service|  %>
+
           <div class="home-2_card">
             <% if service.images.attached? %>
               <%= image_tag service.images.first %>
@@ -117,5 +118,4 @@
       </div>
     </div>
   </div>
-
   <script src="https://apis.google.com/js/platform.js" async defer></script>
