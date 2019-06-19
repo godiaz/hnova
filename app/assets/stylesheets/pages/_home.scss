@@ -233,7 +233,7 @@
       font-weight: 300;
     }
 
-    & h6 {
+    & h6, a {
       color: $color-5;
       font-size: 28px;
       font-weight: 700;
@@ -241,6 +241,11 @@
       margin: 20px 0;
       font-family: $nunito;
       width: 100%;
+      transition: 0.4s;
+
+      &:hover {
+        color: $color-1
+      }
     }
 
     & span {
@@ -380,7 +385,7 @@
       width: 100%;
 
       & h6 {
-        font-size: 26px;
+        font-size: 22px;
         line-height: 35px;
       }
 
@@ -853,6 +858,28 @@
         margin-top: 10px;
         margin-right: 10px;
         max-width: 350px;
+
+        & h5 {
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    @include for-small-phone-only {
+      width: 100%;
+      padding: 40px 20px;
+
+      & h5 {
+        font-weight: 800;
+      }
+
+      &_card {
+        margin-top: 10px;
+        margin-right: 10px;
+        width: 280px;
+        max-width: 280px;
+        min-width: 280px;
 
         & h5 {
           font-size: 18px;
