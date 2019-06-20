@@ -1,9 +1,19 @@
 #main {
-  position: relative;
-  top: 0;
-  left: 0;
-  transition: 0.4s;
+  // position: absolute;
+  // width: 100vw;
+  // height: 100vh;
+  // top: 0;
+  // left: 0;
+  // transition: 0.4s;
+  // z-index: 5000;
+  // background-color: black;
+  // opacity: 1;
+  // display: none;
 }
+
+// .opacity {
+//   transition: 0.4s;
+// }
 
 .navbar {
   @include absCenterSB;
@@ -13,7 +23,7 @@
   width: 100%;
   transition: 0.4s;
   position: fixed;
-  z-index: 9999;
+  z-index: 8000;
     top: 0;
 
   a {
@@ -79,7 +89,7 @@
   z-index: 1;
   top: 0;
   left: -250px;
-  z-index: 1000;
+  z-index: 9000;
   background-color: $color-3-lighter;
   overflow-x: hidden;
   transition: 0.4s;
