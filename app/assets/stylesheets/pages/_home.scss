@@ -846,8 +846,8 @@
     }
 
     @include for-large-devices-down {
-      width: 85vw;
-      padding: 100px 80px;
+      width: 90vw;
+      padding: 100px 50px;
 
       & h5:first-child {
         line-height: 65px;
