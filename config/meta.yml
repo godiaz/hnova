@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Thee Curious Traveller"
+meta_title: "Thee Curious Traveller - Tour Guide in Cape Town"
+meta_description: "Thee Curious Traveller is dedicated to display in its outmoust magnificence the city of Cape Town in South Africa."
+meta_image: "meta-image.png"                       # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
