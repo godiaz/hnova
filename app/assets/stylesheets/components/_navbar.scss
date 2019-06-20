@@ -50,6 +50,10 @@
     & span {
       display: none;
     }
+
+    & button {
+      width: 50px;
+    }
   }
 
   @include for-small-phone-only {

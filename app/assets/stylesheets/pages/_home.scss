@@ -14,15 +14,19 @@
     font-size: 76px;
 
     @include for-small-devices-down {
-      font-size: 66px;
+      font-size: 60px;
       top: 10px;
       left: 10px;
     }
 
     @include for-phone-only {
-      font-size: 66px;
+      font-size: 60px;
       top: 10px;
       left: 10px;
+    }
+
+    @include for-small-phone-only {
+      font-size: 40px;
     }
   }
 
@@ -408,8 +412,12 @@
       height: 350px;
       width: 100%;
 
-      & h6 {
-        font-size: 22px;
+      & h6:first-child {
+        font-size: 24px;
+      }
+
+      & h6, a  {
+        font-size: 24px;
         line-height: 35px;
       }
 
@@ -886,9 +894,10 @@
       }
 
       &_card {
-        margin-top: 10px;
-        margin-right: 10px;
+        margin-top: 15px;
+        margin-right: 0px;
         max-width: 350px;
+        min-width: 280px;
 
         & h5 {
           font-size: 18px;
