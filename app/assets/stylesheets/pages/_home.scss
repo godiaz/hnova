@@ -29,7 +29,8 @@
     }
 
     @include for-phone-only {
-      font-size: 60px;
+      font-size: 43px;
+      width: 90%;
       bottom: 10px;
       left: 10px;
     }
