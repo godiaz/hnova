@@ -70,6 +70,8 @@
           color: white;
           padding: 10px 10px;
           transition: 0.3s;
+          max-width: 60px;
+          max-height: 60px;
 
           &:hover {
             text-decoration: none;
