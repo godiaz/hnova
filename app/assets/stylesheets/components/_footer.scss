@@ -27,6 +27,12 @@
         font-size: 12px;
       }
     }
+
+    @include for-small-phone-only {
+      & p,a {
+        font-size: 9px;
+      }
+    }
   }
 
   .footer {
