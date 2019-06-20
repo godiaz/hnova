@@ -3,13 +3,37 @@
 .home-1 {
   position: relative;
 
+  & h3 {
+    position: absolute;
+      top: 20px;
+      left: 40px;
+    width: 60%;
+    padding: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 76px;
+
+    @include for-small-devices-down {
+      font-size: 66px;
+      top: 10px;
+      left: 10px;
+    }
+
+    @include for-phone-only {
+      font-size: 66px;
+      top: 10px;
+      left: 10px;
+    }
+  }
+
   &_background {
-    background-image: url('https://images.pexels.com/photos/2457284/pexels-photo-2457284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-image: url('https://res.cloudinary.com/hoxton-digital/image/upload/q_auto/v1561030272/hoxtontriangle.gif');
+    background-position: center;
     height: 700px;
     width: 100%;
     background-size: cover;
     transition: 0.5s;
-    filter: brightness(80%);
+    filter: brightness(50%);
 
     &:hover {
       transition: 0.5s;
@@ -25,7 +49,7 @@
     }
 
     @include for-phone-only {
-      background-image: url('https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940');
+      background-image: url('https://res.cloudinary.com/hoxton-digital/image/upload/q_auto/v1561030272/hoxtontriangle.gif');
     }
   }
 }
@@ -598,7 +622,7 @@
       width: 100%;
 
       & h6 {
-        font-size: 26px;
+        font-size: 24px;
         line-height: 35px;
       }
 
