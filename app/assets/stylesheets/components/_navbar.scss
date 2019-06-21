@@ -1,19 +1,18 @@
 #main {
-  // position: absolute;
+  // position: fixed;
   // width: 100vw;
-  // height: 100vh;
+  // height: 100%;
   // top: 0;
   // left: 0;
-  // transition: 0.4s;
-  // z-index: 5000;
-  // background-color: black;
-  // opacity: 1;
-  // display: none;
+  // z-index: 9000;
+  // transition: margin-left .5s;
+  // padding: 20px;
 }
 
-// .opacity {
-//   transition: 0.4s;
+// .darken {
+//   background-color: rgba(0,0,0,1.0);
 // }
+
 
 .navbar {
   @include absCenterSB;
