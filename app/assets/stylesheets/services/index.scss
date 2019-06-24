@@ -160,4 +160,25 @@
       padding: 0 0;
     }
   }
+
+  @include for-phone-only {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+
+    &_image {
+      margin-bottom: 30px;
+      width: 100%;
+
+      & img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+      }
+    }
+
+    &_content {
+      padding: 0 0;
+    }
+  }
 }

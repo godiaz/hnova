@@ -34,7 +34,7 @@
         <div class="home-2_card">
           <hr align="left">
           <p>Services Directory</p>
-          <h6>Discover All The Different <span>Services</span> That Hoxton Digital has to <span>Offer</span></h6>
+          <h6 class="home-2_card_h6">Discover All The Different <span>Services</span> That Hoxton Digital has to <span>Offer</span></h6>
           <%= link_to services_path do %>
             <button>Right Here</button>
           <% end %>
@@ -48,6 +48,7 @@
               <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
             <% end %>
             <h6><%= link_to service.title, services_path %></h6>
+<!--             <span class="home-2_card_info">i</span> -->
           </div>
         <% end %>
       </div>
