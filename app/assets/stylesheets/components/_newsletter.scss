@@ -67,6 +67,10 @@
           bottom: 10px;
       }
     }
+
+    @include for-phone-only {
+      padding: 10% 10%;
+    }
   }
 }
 
