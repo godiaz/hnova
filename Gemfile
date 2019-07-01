@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'social-share-button'
+gem 'gibbon'
 
 # NEW GEMS
 gem 'cloudinary'

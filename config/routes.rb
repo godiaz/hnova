@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/privacy', to: 'pages#privacy'
   get '/about', to: 'pages#about'
   get '/contact', to: 'pages#contact'
+  post 'subscribe', to: 'pages#subscribe'
 
   resources :projects
   resources :services
