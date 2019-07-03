@@ -1,0 +1,74 @@
+.design-banner {
+  background-color: white;
+  height: 600px;
+  @include absCenterSA;
+  padding: 0 60px;
+
+  &_content {
+    & h4 {
+      font-size: 46px;
+      font-weight: 800;
+      color: $color-5;
+      max-width: 800px;
+    }
+
+    & p {
+      font-size: 18px;
+      font-weight: 300;
+      color: $color-5;
+    }
+
+    & button {
+      border-radius: 50px;
+      background-color: $color-2;
+      border: none;
+      color: white;
+      padding: 5px 30px;
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+
+  & img {
+    height: 500px;
+    width: 350px;
+    object-fit: cover;
+  }
+
+  @include for-small-devices-down {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 900px;
+  }
+
+  @include for-phone-only {
+    padding: 0 40px;
+
+    &_content {
+      height: 700px;
+
+      & h4 {
+        font-size: 26px;
+      }
+
+      & p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @include for-small-phone-only {
+
+    & img {
+      height: 400px;
+      width: 280px;
+    }
+  }
+
+}
+
+.design-filters {
+  height: 60px;
+  width: 100%;
+  background-color: $color-3;
+}

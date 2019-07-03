@@ -1,0 +1,15 @@
+<div class="new-project">
+  <h1>Add a Project</h1>
+  <%= simple_form_for(@project) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :programming_language %>
+      <%= f.input :url %>
+      <%= f.input :project_type %>
+      <%= f.input :technology %>
+      <%= f.input :objective %>
+      <%= f.input :components, input_html: { multiple: true }, as: :check_boxes, collection: %w(MobileApp WebApp Website SEO Mixins Devise SimpleForm Bundler WebPack ZoomHero ParallaxScrolling Stripe PaypalSDK Bootstrap SCSSNesting PolymorphicDatabase Pundit AJAX PostMark MailChimp Trix WYSIWYG KeyFrameAnimations RequestAnimationFrame), class: "form-radio-boxes", include_blank: false  %>
+      <%= f.input :images, as: :file, input_html: { multiple: true } %>
+      <%= f.submit %>
+  <% end %>
+</div>
