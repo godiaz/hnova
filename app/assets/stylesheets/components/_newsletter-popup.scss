@@ -29,7 +29,7 @@
     }
 
     &:hover {
-      color: #FBFBFB;
+      color: #FFA767;
     }
   }
 
@@ -105,7 +105,6 @@
     }
   }
 
-
   //OPEN STATES
 
   &:target {
@@ -131,6 +130,23 @@
         top: 1rem;
         right: 1.5rem;
         font-size: 2rem;
+      }
+    }
+  }
+
+  @include for-small-phone-only {
+    height: 112vh;
+
+    &_content {
+
+      & p {
+        font-size: 14px;
+      }
+
+      & form {
+        & input {
+          width: 235px;
+        }
       }
     }
   }

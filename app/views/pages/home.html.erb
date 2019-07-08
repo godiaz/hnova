@@ -120,6 +120,17 @@
       </div>
     </div>
   </div>
+  <div class="newsletter">
+    <div class="newsletter_container">
+      <h6>Hungry for the latest news & updates?</h6>
+      <p>We have created our newsletter service to inform you of deals, promotions, tech news and software releases at Hoxton Digital.</p>
+      <form action="/subscribe" method="post" id="mailing-list" class="newsletter_container_form">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <input type="email" name="email" class="newsletter_container_form_input" placeholder="Email">
+        <button class="newsletter_container_form_button pulse-button">Go!</button>
+      </form>
+    </div>
+  </div>
   <div id="popup-newsletter" class="popup">
     <div class="popup_content">
       <a href="/" class="popup_close">&times;</a>
