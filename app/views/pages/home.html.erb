@@ -120,4 +120,16 @@
       </div>
     </div>
   </div>
+  <div id="popup-newsletter" class="popup">
+    <div class="popup_content">
+      <a href="/" class="popup_close">&times;</a>
+      <h6>Hungry for the latest news & updates?</h6>
+      <p>We have created our newsletter service to inform you of deals, promotions, tech news and software releases at Hoxton Digital.</p>
+      <form action="/subscribe" method="post" id="mailing-list" class="#">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <input type="email" name="email" class="#" placeholder="Email">
+        <button class="pulse-button-p">Go!</button>
+      </form>
+    </div>
+  </div>
   <script src="https://apis.google.com/js/platform.js" async defer></script>

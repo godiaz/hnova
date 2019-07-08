@@ -1,0 +1,167 @@
+
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+    top: 0;
+    left: 0;
+  background-color: rgba(black, 0.8);
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all .3s;
+
+  &_close {
+    &:link,
+    &:visited {
+      color: #334048;
+      position: absolute;
+        top: 1.5rem;
+        right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all .2s;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: #FBFBFB;
+    }
+  }
+
+  &_content {
+    position: absolute;
+      top: 50%;
+      left: 50%;
+    width: 80%;
+    height: 450px;
+    background-image: asset-url('day-pyramids.png');
+    background-size: cover;
+    box-shadow: 0 2rem 4rem rgba(black, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.5);
+    transition: all .4s .2s;
+    padding: 10% 5%;
+    // Orientation //
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    & h6 {
+      font-weight: 600;
+      font-size: 26px;
+      color: #334048;
+    }
+
+    & p {
+      color: #415561;
+      font-weight: 200;
+      font-size: 16px;
+    }
+
+    & form {
+      position: relative;
+
+      & input {
+        background-color: #92BAD0;
+        outline: 0;
+        border: none;
+        padding: 5px 20px;
+        color: #FBFBFB;
+        font-weight: 300;
+        border-radius: 25px 0 0 25px;
+        width: 300px;
+        height: 40px;
+        font-size: 14px;
+
+        &:focus {
+          background-color: #88B1C9;
+          border: none;
+          outline: 0;
+        }
+      }
+
+      & ::placeholder {
+        color: white;
+      }
+
+      & button {
+        position: absolute;
+          top: 0px;
+          right: -20px;
+          bottom: 10px;
+      }
+    }
+
+    @include for-phone-only {
+      width: 85%;
+    }
+  }
+
+
+  //OPEN STATES
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &_content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &_img {
+    display: block;
+    width: 100%;
+  }
+
+  @include for-phone-only {
+
+    &_close {
+      &:link,
+      &:visited {
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 2rem;
+      }
+    }
+  }
+
+}
+
+
+.pulse-button-p {
+
+  position: relative;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border: none;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  background-color: #FFA767;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 0.4s;
+  -webkit-animation: pulsey 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulsey 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulsey 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulsey 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  font-size: 12px;
+}
+
+.pulse-button-p:hover
+{
+  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+  background-color: #E99050;
+}
+

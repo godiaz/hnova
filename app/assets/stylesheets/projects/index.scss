@@ -176,6 +176,12 @@
     @include for-phone-only {
       width: 80vw;
       height: 430px;
+
+      &_image {
+        & img {
+          object-fit: cover;
+        }
+      }
     }
   }
 }
