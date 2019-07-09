@@ -1,15 +1,45 @@
-<div class="new-project">
-  <h1>Add a Project</h1>
-  <%= simple_form_for(@project) do |f| %>
-      <%= f.input :title %>
-      <%= f.input :description %>
-      <%= f.input :programming_language %>
-      <%= f.input :url %>
-      <%= f.input :project_type %>
-      <%= f.input :technology %>
-      <%= f.input :objective %>
-      <%= f.input :components, input_html: { multiple: true }, as: :check_boxes, collection: %w(MobileApp WebApp Website SEO Mixins Devise SimpleForm Bundler WebPack ZoomHero ParallaxScrolling Stripe PaypalSDK Bootstrap SCSSNesting PolymorphicDatabase Pundit AJAX PostMark MailChimp Trix WYSIWYG KeyFrameAnimations RequestAnimationFrame), class: "form-radio-boxes", include_blank: false  %>
-      <%= f.input :images, as: :file, input_html: { multiple: true } %>
-      <%= f.submit %>
-  <% end %>
+<div class="white-space"></div>
+<div class="edit-design-nav">
+  <h6>Your New Project Creation</h6>
 </div>
+<div class="design-container">
+  <div class="useful-links">
+    <div class="news">
+      <h6>Some Useful Links</h6>
+      <%= link_to 'Web Development', services_path %>
+      <%= link_to 'Mobile Development', services_path %>
+      <%= link_to 'Digital Marketing', services_path %>
+      <%= link_to 'SEO', services_path %>
+      <br><br>
+      <h6>Hoxton Digital</h6>
+      <%= link_to 'Our Works', projects_path %>
+      <%= link_to 'Learn About Us', about_path %>
+      <%= link_to 'Hire Us', contact_path %>
+      <br><br>
+      <h6>Have any Ideas For Us?</h6>
+      <p>We would love to hear your feedback</p>
+      <%= link_to 'Send Message', 'mailto:contact@hoxton-digital.com', class: "send-button" %>
+    </div>
+    <div class="hire-developers">
+      <h3>Hire the best developers!</h3>
+      <p>Hoxton Digital is proud to develop for several companies in England, France, US & Colombia</p>
+      <%= link_to 'Act Now', 'mailto:contact@hoxton-digital.com', class: "send-button-red" %>
+    </div>
+  </div>
+  <div class="new-design">
+    <%= image_tag 'https://media3.giphy.com/media/eTVG7eVNnud8Y/giphy.gif?cid=790b76115d24885e544c554a49314014&rid=giphy.gif' %>
+    <div class="new-design_form">
+      <%= simple_form_for(@design) do |f| %>
+          <%= f.input :title %>
+          <%= f.input :description, input_html: { class: "edit-design-description" } %>
+          <%= f.input :image, as: :file %>
+          <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+  <div class="promotions-2">
+    <h6>Your Company Name Could Be Here</h6>
+    <%= link_to 'Act Now', 'mailto:contact@hoxton-digital.com' %>
+  </div>
+</div>
+

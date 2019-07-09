@@ -1,7 +1,9 @@
 
 <div class="sign-in-page absCenterColumn">
   <div class="sign-in-form 50vh absCenterColumn">
-    <h2>Sign up</h2>
+
+    <h2>Hoxton Digital</h2>
+    <p>Join the family</p>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
@@ -18,6 +20,8 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
+        <%= f.input :subscribe, as: :boolean, label: "Check this box to receive the latest news & updates" %>
+        <%#= f.input :image, as: :file, label: false %>
       </div>
 
       <div class="form-actions">
@@ -28,3 +32,12 @@
     <%#= render "devise/shared/links" %>
   </div>
 </div>
+<script>
+  var file = document.getElementById('my_img_field').files[0]
+      var fr = new FileReader()
+      fr.readAsDataURL(file)
+      fr.onload = function(e) {
+        var img = document.getElementById('image_preview')
+        img.src = this.result
+      }
+</script>

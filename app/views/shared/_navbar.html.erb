@@ -4,20 +4,38 @@
   <a class="sidebar-links" href="/about">About</a>
   <a class="sidebar-links" href="/services">Services</a>
   <a class="sidebar-links" href="/projects">Portfolio</a>
-<!--   <a class="sidebar-links" href="/designs">Design</a> -->
-<!--   <a class="sidebar-links" href="#">SEO</a>
-  <a class="sidebar-links" href="#">Designs</a> -->
+  <a class="sidebar-links" href="/designs">Design</a>
   <a class="sidebar-links" href="/contact">Contact</a>
 </div>
 
-<nav class="navbar" id="navbar">
-  <button>
+<div id="mySideMenu" class="sidemenu">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+  <%= link_to 'My Profile', edit_user_registration_path, class: "sidemenu-links" %>
+  <%= link_to 'My Designs', dashboard_designs_path, class: "sidemenu-links" %>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "sidemenu-links" %>
+</div>
+
+<nav class="navbar <%= params[:controller] == 'designs' ? 'nav-white' : 'nav-grey' %>" id="navbar">
+  <button class=" <%= params[:controller] == 'designs' ? 'nav-white' : 'nav-grey' %>">
     <span onclick="openNav()">menu</span>
     <i class="fas fa-bars" onclick="openNav()"></i>
   </button>
   <a href="/" class="navbar_text"><h1>HOXTON DIGITAL</h1></a>
-  <button class="navbar_search">
-    <!-- <i class="fas fa-search"></i> -->
+
+  <button class="navbar_logs <%= params[:controller] == 'designs' ? 'nav-white' : 'nav-grey' %>">
+    <% if user_signed_in? %>
+      <% if current_user.image.attached? %>
+        <span onclick="openMenu()">
+         <%= image_tag current_user.image, class: "profile" %>
+        </span>
+      <% else %>
+        <span onclick="openMenu()">
+          <%= image_tag 'profile-icon.png', class: "profile" %>
+        </span>
+      <% end %>
+    <% else %>
+      <%= link_to 'Login', new_user_session_path %>
+    <% end %>
   </button>
 </nav>
 
@@ -35,6 +53,25 @@
   function closeNav() {
     document.getElementById("mySidenav").style.left = "-250px";
     document.getElementById("main").style.left= "0";
+    const bodyish = document.getElementById("main");
+    bodyish.style.backgroundColor = "rgba(0,0,0,0.0)";
+    bodyish.style.display = "none";
+  }
+</script>
+<script>
+  function openMenu() {
+    document.getElementById("mySideMenu").style.right = "0";
+    document.getElementById("main").style.right = "250px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    const bodyish = document.getElementById("main");
+    // bodyish.style.backgroundColor = "rgba(0,0,0,0.8)";
+    // bodyish.style.display = "inline";
+    // bodyish.classList.add("darken");
+  }
+
+  function closeMenu() {
+    document.getElementById("mySideMenu").style.right = "-250px";
+    document.getElementById("main").style.right = "0";
     const bodyish = document.getElementById("main");
     bodyish.style.backgroundColor = "rgba(0,0,0,0.0)";
     bodyish.style.display = "none";

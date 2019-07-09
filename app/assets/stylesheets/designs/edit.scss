@@ -1,0 +1,247 @@
+.edit-design-nav {
+  height: 50px;
+  background-color: $color-5;
+  margin-bottom: 10px;
+  @include absCenter;
+  color: white;
+  font-weight: 300;
+
+  & h6 {
+    margin-bottom: 0px;
+    font-weight: 300;
+  }
+
+  @include for-phone-only {
+    margin-bottom: 0;
+  }
+}
+
+.design-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  // max-width: 1000px;
+  margin-bottom: 40px;
+
+  @include for-small-devices-down {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include for-phone-only {
+    flex-direction: column;
+  }
+}
+
+.edit-design {
+  @include absCenterColumn;
+  padding: 20px;
+  padding-bottom: 40px;
+  max-width: 1500px;
+  background-color: white;
+  margin: 0 10px;
+  border: 1px solid #DFDFDF;
+
+  & img {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    margin-bottom: 40px;
+    object-fit: cover;
+  }
+
+  &_form {
+
+    & label {
+      font-weight: 300;
+    }
+
+    & input[type="text"] {
+      font-weight: 300;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    & input[type="submit"] {
+      background-color: $color-4-darker !important;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      padding: 4px 10px;
+      min-width: 500px;
+      margin-bottom: 20px;
+
+      &:hover {
+        background-color: $color-4-dark !important;
+      }
+    }
+
+    & a {
+      background-color: #EF4A4A;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 14px;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: #CE4A4A;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include for-small-devices-down {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  @include for-phone-only {
+    margin: 0;
+
+    & img {
+      height: 400px;
+    }
+
+    &_form {
+
+      & input[type="submit"] {;
+        padding: 4px 10px;
+        min-width: 380px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 70px 10px;
+  // background-color: white;
+  width: 300px;
+  // border: 1px solid #DFDFDF;
+  margin-bottom: 10px;
+
+  & h6 {
+    font-size: 16px;
+    color: $color-5;
+  }
+
+  & a {
+    color: gray;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  & p {
+    font-weight: 300;
+    color: gray;
+  }
+
+  @include for-small-devices-down {
+    width: 100vw;
+    margin: 0px;
+  }
+}
+
+
+.send-button {
+  background-color: $color-1;
+  padding: 5px 20px;
+  color: white !important;
+  border-radius: 50px;
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color-1-light;
+  }
+}
+
+.hire-developers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  // background-color: white;
+  width: 300px;
+  // margin-left: 20px;
+  // border: 1px solid #DFDFDF;
+  height: 305px;
+
+  & h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: $color-5;
+    width: 80%;
+  }
+
+  & p {
+    font-weight: 300;
+    color: gray;
+    width: 80%;
+  }
+
+  @include for-small-devices-down {
+    width: 100vw;
+    margin: 0px;
+  }
+}
+
+.send-button-red {
+  background-color: $color-2;
+  padding: 5px 20px;
+  color: white !important;
+  border-radius: 50px;
+  font-size: 16px;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color-2-dark;
+  }
+
+}
+
+.promotions {
+  height: 850px;
+  width: 300px;
+  background-image: url('https://media3.giphy.com/media/l41lHy1XNX3xSeqHu/giphy.gif?cid=790b76115d248a536f496f5a55b750a8&rid=giphy.gif');
+  background-size: cover;
+  background-position: center;
+  @include absCenterColumn;
+
+  & h6 {
+    color: $light-gray;
+    text-align: center;
+    width: 70%;
+    font-weight: 300;
+    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  & a {
+    background-color: $light-gray;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: $color-5 !important;
+    opacity: 0.8;
+
+    &:hover {
+      text-decoration: none;
+      background-color: gray;
+    }
+  }
+
+  @include for-medium-devices-down {
+    display: none;
+  }
+
+
+}

@@ -1,3 +1,17 @@
 .sign-in-page {
-  height: 100vh;
+  margin: 10vh 0;
+}
+
+.sign-in-form {
+  background-color: white;
+  padding: 5%;
+  border: 1px solid #FAFAFA;
+  border-radius: 3px;
+  // -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  //    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  //         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.edit-user-page {
+  margin: 10vh 0;
 }
