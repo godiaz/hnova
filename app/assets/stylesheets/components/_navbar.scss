@@ -84,8 +84,10 @@
     }
 
     @include for-phone-only {
+      width: 66px !important;
+
       & a {
-        padding: 14px 12px;
+        padding: 14px 20px;
       }
     }
   }
