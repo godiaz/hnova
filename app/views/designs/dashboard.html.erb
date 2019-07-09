@@ -3,22 +3,26 @@
   <%= link_to 'Add Design', new_design_path %>
 </div>
 <div class="dashboard_container">
-  <div class="dashboard_designs">
-    <% @designs.each do |design| %>
-      <div class="dashboard_designs_card">
-        <%= link_to edit_design_path(design) do %>
-          <%= image_tag design.image %>
-          <span>
-            <div>
-              <p><%= design.title %></p>
-              <p><%= design.created_at.strftime("%B %d, %Y") %></p>
-            </div>
-            <button>Edit</button>
-          </span>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
+  <% if @designs.any?  %>
+    <div class="dashboard_designs">
+      <% @designs.each do |design| %>
+        <div class="dashboard_designs_card">
+          <%= link_to edit_design_path(design) do %>
+            <%= image_tag design.image %>
+            <span>
+              <div>
+                <p><%= design.title %></p>
+                <p><%= design.created_at.strftime("%B %d, %Y") %></p>
+              </div>
+              <button>Edit</button>
+            </span>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+
+  <% end %>
 </div>
 
 
