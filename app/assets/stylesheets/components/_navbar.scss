@@ -90,6 +90,10 @@
         padding: 14px 20px;
       }
     }
+
+    @include for-small-phone-only {
+      width: 65px !important;
+    }
   }
 
 

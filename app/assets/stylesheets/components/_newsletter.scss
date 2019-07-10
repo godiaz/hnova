@@ -59,6 +59,10 @@
           border: none;
           outline: 0;
         }
+
+        @include for-small-phone-only {
+          width: 240px !important;
+        }
       }
 
       & ::placeholder {
@@ -104,3 +108,4 @@
   -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
   background-color: #FBFBFB;
 }
+
