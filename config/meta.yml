@@ -1,7 +1,7 @@
 # config/meta.yml
 
 meta_product_name: "Hoxton Digital"
-meta_title: "London Web Development Agency"
-meta_description: "We are a uniquely structured software factory based in London with presence in over 6 countries."
+meta_title: "London Web Development & App Development | Hoxton Digital"
+meta_description: "London Web Development Agency | Hoxton Digital | London Based Web Development Agency Providing Web Design, Web Development, Mobile App Development & More."
 meta_image: "meta-image.png"                       # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
