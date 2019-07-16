@@ -89,6 +89,7 @@
         background-size: contain;
         filter: brightness(80%);
         transition: 0.5s;
+        object-fit: cover;
 
         &:hover {
           transform: scale(1.08);
