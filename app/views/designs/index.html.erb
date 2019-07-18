@@ -18,7 +18,7 @@
 
       <div class="design-index-card">
         <a href="#design-popup_<%= design.id %>">
-          <%= image_tag design.image.variant(resize: "550x550") %>
+          <%= image_tag design.image %>
           <div class="design-index-card_description">
             <div>
               <% if design.user.image.attached? %>
