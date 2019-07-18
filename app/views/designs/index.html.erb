@@ -18,11 +18,11 @@
 
       <div class="design-index-card">
         <a href="#design-popup_<%= design.id %>">
-          <%= image_tag design.image %>
+          <%= image_tag design.image.variant(resize: "550x550") %>
           <div class="design-index-card_description">
             <div>
               <% if design.user.image.attached? %>
-                <%= image_tag design.user.image, class: "profile" %>
+                <%= image_tag design.user.image.variant(resize: "50x50"), class: "profile" %>
               <% else %>
                 <%= image_tag 'profile-icon.png', class: "profile" %>
               <% end %>
@@ -40,7 +40,7 @@
           <div class="design-popup_content_details">
             <a href="/designs" class="design-popup_close">&times;</a>
             <% if design.user.image.attached? %>
-              <%= image_tag design.user.image, class: "profile-design" %>
+              <%= image_tag design.user.image.variant(resize: "80x80"), class: "profile-design" %>
             <% else %>
               <%= image_tag 'profile-icon.png', class: "profile-design" %>
             <% end %>
