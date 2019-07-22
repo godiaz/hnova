@@ -21,6 +21,5 @@ class User < ApplicationRecord
         end
       end
     end
-    # raise
   end
 end
