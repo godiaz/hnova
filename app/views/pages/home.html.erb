@@ -41,7 +41,7 @@
         </div>
         <% @services.last(4).each do |service| %>
           <div class="home-2_card">
-            <%= link_to service_path(service) do %>
+            <%= link_to services_path do %>
               <% if service.images.attached? %>
                 <%= image_tag service.images.first %>
               <% else %>
