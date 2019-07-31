@@ -28,7 +28,37 @@
     </ul> -->
   </div>
   <div class="home-2">
-    <div class="home-2_content">
+    <div class="home-2_container">
+      <h4><span>Services</span> we provide</h4>
+      <div class="home-2_container_cards">
+        <div class="home-2_card">
+          <hr align="left">
+          <p>Services Directory</p>
+          <h6 class="home-2_card_h6">Discover All The Different Services That Hoxton Digital has to Offer</h6>
+          <%= link_to services_path do %>
+            <button>Right Here</button>
+          <% end %>
+        </div>
+        <% @services.last(4).each do |service| %>
+          <div class="home-2_card">
+            <%= link_to service_path(service) do %>
+              <% if service.images.attached? %>
+                <%= image_tag service.images.first %>
+              <% else %>
+                <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
+              <% end %>
+              <span>
+                <div>
+                  <p><%= service.title %></p>
+                </div>
+                <button>Details</button>
+              </span>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+<!--     <div class="home-2_content">
       <h4><span>Services</span> we provide</h4>
       <div class="home-2_services-container">
         <div class="home-2_card">
@@ -39,8 +69,7 @@
             <button>Right Here</button>
           <% end %>
         </div>
-        <% @services.first(3).each do |service|  %>
-
+        <% @services.first(4).each do |service|  %>
           <div class="home-2_card">
             <% if service.images.attached? %>
               <%= image_tag service.images.first %>
@@ -48,29 +77,31 @@
               <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
             <% end %>
             <h6><%= link_to service.title, services_path %></h6>
-<!--             <span class="home-2_card_info">i</span> -->
           </div>
         <% end %>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="home-3">
-    <div class="home-3_content">
+    <div class="home-3_container">
       <h4><span>Products</span> that we have proudly built!</h4>
-      <div class="home-3_services-container">
-        <% @projects.first(4).each do |project|  %>
+      <div class="home-3_container_cards">
+        <% @projects.last(5).each do |project| %>
           <div class="home-3_card">
-            <div class="home-3_card_image">
+            <%= link_to project_path(project) do %>
               <% if project.images.attached? %>
                 <%= image_tag project.images.first %>
               <% else %>
                 <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
               <% end %>
-            </div>
-            <div class="home-3_card_content">
-              <p><%= link_to project.title, project_path(project) %></p>
-              <span><%= project.project_type %></span>
-            </div>
+              <span>
+                <div>
+                  <p><%= project.title %></p>
+                  <p><%= project.project_type %></p>
+                </div>
+                <button>Details</button>
+              </span>
+            <% end %>
           </div>
         <% end %>
       </div>
