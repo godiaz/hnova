@@ -42,7 +42,7 @@
   }
 
   &_background {
-    background-image: url('https://res.cloudinary.com/hoxton-digital/image/upload/q_auto/v1561030272/hoxtontriangle.gif');
+    background-image: url('https://res.cloudinary.com/hoxton-digital/image/upload/q_auto/v1565088634/rectangles.gif');
     background-position: center;
     height: 700px;
     width: 100%;
@@ -214,7 +214,8 @@
   justify-content: center !important;
 
   &_container {
-    @include absCenterColumn;
+    display: flex;
+    flex-direction: column;
     width: 90vw;
 
     @include for-phone-only {
@@ -225,7 +226,7 @@
       font-weight: 200;
       text-align: left;
       margin-bottom: 30px;
-      margin-left: 30px;
+      margin-left: 10px;
       margin-top: 60px;
       width: 100%;
 
@@ -457,7 +458,8 @@
   justify-content: center !important;
 
   &_container {
-    @include absCenterColumn;
+    display: flex;
+    flex-direction: column;
     width: 90vw;
 
     @include for-phone-only {
@@ -468,7 +470,7 @@
       font-weight: 200;
       text-align: left;
       margin-top: 60px;
-      margin-left: 30px;
+      margin-left: 10px;
       width: 100%;
 
       & span {
