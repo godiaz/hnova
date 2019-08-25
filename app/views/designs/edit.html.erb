@@ -8,7 +8,7 @@
     <%= link_to 'Act Now', 'mailto:contact@hoxton-digital.com' %>
   </div>
   <div class="edit-design">
-    <%= image_tag @design.image %>
+    <%= image_tag @design.image, , alt: "london web development" %>
     <div class="edit-design_form">
       <%= simple_form_for(@design) do |f| %>
           <%= f.input :title %>

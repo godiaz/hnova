@@ -8,7 +8,7 @@
       <% @designs.each do |design| %>
         <div class="dashboard_designs_card">
           <%= link_to edit_design_path(design) do %>
-            <%= image_tag design.image %>
+            <%= image_tag design.image, alt: "london web development" %>
             <span>
               <div>
                 <p><%= design.title %></p>

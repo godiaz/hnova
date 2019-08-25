@@ -18,13 +18,13 @@
 
       <div class="design-index-card">
         <a href="#design-popup_<%= design.id %>">
-          <%= image_tag design.image %>
+          <%= image_tag design.image, alt: "london web development" %>
           <div class="design-index-card_description">
             <div>
               <% if design.user.image.attached? %>
-                <%= image_tag design.user.image.variant(resize: "50x50"), class: "profile" %>
+                <%= image_tag design.user.image.variant(resize: "50x50"), alt: "london web development", class: "profile" %>
               <% else %>
-                <%= image_tag 'profile-icon.png', class: "profile" %>
+                <%= image_tag 'profile-icon.png', alt: "london web development", class: "profile" %>
               <% end %>
               <h6><%= design.title %></h6>
             </div>
@@ -40,9 +40,9 @@
           <div class="design-popup_content_details">
             <a href="/designs" class="design-popup_close">&times;</a>
             <% if design.user.image.attached? %>
-              <%= image_tag design.user.image.variant(resize: "80x80"), class: "profile-design" %>
+              <%= image_tag design.user.image.variant(resize: "80x80"), alt: "london web development", class: "profile-design" %>
             <% else %>
-              <%= image_tag 'profile-icon.png', class: "profile-design" %>
+              <%= image_tag 'profile-icon.png', alt: "london web development", class: "profile-design" %>
             <% end %>
             <div class="design-popup_content_details_text">
               <h6><%= design.title %></h6>
@@ -50,7 +50,7 @@
             </div>
           </div>
           <div class="design-popup_content_details_image">
-            <%= image_tag design.image %>
+            <%= image_tag design.image, alt: "london web development" %>
           </div>
           <div class="design-popup_content_details_description">
             <h6>Description:</h6>

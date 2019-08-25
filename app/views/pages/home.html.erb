@@ -43,9 +43,9 @@
           <div class="home-2_card">
             <%= link_to services_path do %>
               <% if service.images.attached? %>
-                <%= image_tag service.images.first %>
+                <%= image_tag service.images.first, alt: "london web design" %>
               <% else %>
-                <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
+                <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940', alt: "london web design" %>
               <% end %>
               <span>
                 <div>
@@ -90,7 +90,7 @@
           <div class="home-3_card">
             <%= link_to project_path(project) do %>
               <% if project.images.attached? %>
-                <%= image_tag project.images.first %>
+                <%= image_tag project.images.first, alt: "london web development" %>
               <% else %>
                 <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
               <% end %>
@@ -109,7 +109,7 @@
   </div>
   <div class="home-bark">
     <div class="home-bark_part-one">
-      <%= image_tag 'bark.png' %>
+      <%= image_tag 'bark.png', alt: "london web development" %>
       <h3>Some Awards & Reviews We've Collected in Our Journey</h3>
       <a href="https://www.bark.com/en/company/hoxton-digital-ltd/AkB77/">
         <button>Reviews</button>
@@ -137,29 +137,29 @@
       <% end %>
       <div class="home-4_reviews_container">
         <div class="home-4_reviews_card">
-          <%= cl_image_tag("clutch.png", :quality=>"auto") %>
-          <%= cl_image_tag("quotes.png", :quality=>"auto") %>
+          <%= cl_image_tag("clutch.png", :quality=>"auto" , alt: "london web development") %>
+          <%= cl_image_tag("quotes.png", :quality=>"auto", alt: "london web development") %>
           <h5>They’re incredibly willing to iterate on the output.</h5>
           <h6>Stotles </h6>
           <p>Co-Founder</p>
         </div>
         <div class="home-4_reviews_card">
-          <%= cl_image_tag("clutch.png", :quality=>"auto") %>
-          <%= cl_image_tag("quotes.png", :quality=>"auto") %>
+          <%= cl_image_tag("clutch.png", :quality=>"auto", alt: "london web development" )%>
+          <%= cl_image_tag("quotes.png", :quality=>"auto", alt: "london web development" )%>
           <h5>Hoxton Digital is so passionate about the work. They really believe in my idea.</h5>
           <h6>BuildSG</h6>
           <p>Owner</p>
         </div>
         <div class="home-4_reviews_card">
-          <%= cl_image_tag("clutch.png", :quality=>"auto") %>
-          <%= cl_image_tag("quotes.png", :quality=>"auto") %>
+          <%= cl_image_tag("clutch.png", :quality=>"auto", alt: "london web development" ) %>
+          <%= cl_image_tag("quotes.png", :quality=>"auto", alt: "london web development" ) %>
           <h5>Hoxton Digital thinks about the challenges we wish to solve and brainstorms new ideas to improve on ours.</h5>
           <h6>Down To Play</h6>
           <p>Co-Founder</p>
         </div>
         <div class="home-4_reviews_card">
-          <%= cl_image_tag("clutch.png", :quality=>"auto") %>
-          <%= cl_image_tag("quotes.png", :quality=>"auto") %>
+          <%= cl_image_tag("clutch.png", :quality=>"auto", alt: "london web development" ) %>
+          <%= cl_image_tag("quotes.png", :quality=>"auto", alt: "london web development" )%>
           <h5>The website they developed streamlined internal processes and helped attract more clients</h5>
           <h6>SERDRAGA</h6>
           <p>CFO</p>
