@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post 'subscribe', to: 'pages#subscribe'
 
   resources :projects
+  resources :posts
   resources :services
   resources :designs do
     collection do
