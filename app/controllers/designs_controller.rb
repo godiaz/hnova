@@ -24,22 +24,6 @@ class DesignsController < ApplicationController
     end
   end
 
-  def destroy
-    @design.destroy
-    redirect_to dashboard_designs_path
-  end
-
-  def update
-
-    if @design.update(design_params)
-      redirect_to design_path(@design)
-    else
-      flash[:error] = 'Didn\'t save'
-    end
-  end
-
-  def edit
-  end
 
   def show
   end
