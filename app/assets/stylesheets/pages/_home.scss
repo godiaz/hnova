@@ -220,6 +220,7 @@
 
     @include for-phone-only {
       width: 100vw;
+      align-items: center;
     }
 
     & h4 {
@@ -464,6 +465,7 @@
 
     @include for-phone-only {
       width: 100vw;
+      align-items: center;
     }
 
     & h4 {
