@@ -21,7 +21,17 @@
               <h6><%= project.title %></h6>
               <div class="projects-index_card_content_description">
                 <p>Project Type:</p>
-                <p><%= project.project_type %></p>
+                <p style=" <% if project.project_type == "Mobile App" || project.project_type == "Mobile Application" %>
+                  background-color: #673AB7;
+                  <% elsif project.project_type == "Web App" || project.project_type == "Web Application"%>
+                  background-color: #546E7A;
+                  <% elsif project.project_type == "Website" %>
+                  background-color: #D81B60;
+                  <% elsif project.project_type == "Progressive App" || project.project_type == "Progressive Web App" %>
+                  background-color: #FFC400;
+                <% end %>">
+                  <%= project.project_type %>
+                </p>
               </div>
             </div>
           </div>
