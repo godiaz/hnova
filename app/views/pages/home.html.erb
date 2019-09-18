@@ -86,7 +86,7 @@
     <div class="home-3_container">
       <h4><span>Products</span> that we have proudly built!</h4>
       <div class="home-3_container_cards">
-        <% @projects.last(5).each do |project| %>
+        <% @projects.first(5).each do |project| %>
           <div class="home-3_card">
             <%= link_to project_path(project) do %>
               <% if project.images.attached? %>
