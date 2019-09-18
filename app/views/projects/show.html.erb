@@ -10,7 +10,7 @@
       <h1> <%= @project.title %> </h1>
       <p> <%= @project.description %></p>
       <p>Programming Language: <span><%= @project.programming_language %></span></p>
-      <p> <%= link_to "Visit Website", "#{@project.url}" %></p>
+      <p> <%= link_to "Visit Website", "#{@project.url}", { target: '_blank' } %></p>
 
     </div>
   </div>
