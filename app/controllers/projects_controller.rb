@@ -24,7 +24,7 @@ class ProjectsController < ApplicationController
     if @project.update(project_params)
       redirect_to project_path(@project)
     else
-      flash[:error] = 'Didn\'t save'
+      flash[:error] = @project.errors.full_messages
     end
   end
 
