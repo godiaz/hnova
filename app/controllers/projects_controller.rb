@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def index
-    @projects = Project.order(level: :desc)
+    @projects = Project.order(importance: :desc)
   end
 
   def new
