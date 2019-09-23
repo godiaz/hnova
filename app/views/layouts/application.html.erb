@@ -33,6 +33,17 @@
     </script>
     <!--End of Zendesk Chat Script-->
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87128550-2">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-87128550-2');
+    </script>
+
     <%= favicon_link_tag 'hdlogo.png' %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>

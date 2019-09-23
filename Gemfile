@@ -20,6 +20,7 @@ gem 'webpacker'
 gem 'social-share-button'
 gem 'gibbon'
 
+
 # NEW GEMS
 gem 'cloudinary'
 gem 'mini_magick'
