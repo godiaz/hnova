@@ -1,5 +1,5 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500|Poppins:200,400,700|Cabin:400,500,600,700|Heebo:100,300,400,500,700,800,900|Nunito+Sans:200,300,400,600,700,800,900|Heebo:100,300,400,500,700,800,900|Montserrat+Subrayada:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500|Poppins:200,400,700|Cabin:400,500,600,700|Heebo:100,300,400,500,700,800,900|Nunito+Sans:200,300,400,600,700,800,900|Heebo:100,300,400,500,700,800,900|Montserrat+Subrayada:400,700|Limelight&display=swa");
 
 // Define fonts for body and headers
 $body-font: "Heebo", "Helvetica", "sans-serif";
@@ -9,6 +9,7 @@ $main-headers: 'Nunito Sans', sans-serif;
 $nunito: 'Nunito Sans', sans-serif;
 $main-text: 'Heebo', sans-serif;
 $title: 'Montserrat Subrayada', sans-serif;
+$limelight: 'Limelight', cursive;
 
 
 h1, h2, h3, h4, h5, h6 {
