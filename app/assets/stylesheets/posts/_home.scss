@@ -1,9 +1,14 @@
 .posts-index {
   background-color: #F6F8F8;
   width: 100%;
+  height: 100%;
   padding-top: 120px;
   display: flex;
   justify-content: center;
+
+  @include for-phone-only {
+    padding-top: 50px;
+  }
 }
 
 .posts-container {
@@ -13,6 +18,9 @@
 .posts-index-headers {
   margin-bottom: 60px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   & h1:first-child {
     text-align: center;
@@ -29,20 +37,37 @@
     text-align: center;
     color: #2B2E30;
   }
+
+  @include for-phone-only {
+    margin-bottom: 20px;
+
+    & h1:first-child {
+      font-size: 28px;
+    }
+
+    & p {
+      width: 90vw;
+      font-size: 11px;
+    }
+  }
 }
 
 .posts-index-filters {
   width: 100%;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  display: none;
 
-  & ul,li {
-    list-style-type: none;
-    display: flex;
+  & a {
+    overflow-x: scroll;
+    width: 120px;
     font-family: $nunito;
-    justify-content: space-around;
     font-weight: 200;
     color: #545454;
     cursor: pointer;
+    padding-left: 0;
+    font-size: 16px;
 
     &:hover {
       font-weight: 400;
@@ -52,7 +77,7 @@
 
 .posts-index-first {
   width: 100%;
-  height: 500px;
+  padding-bottom: 20px;
   display: flex;
   border-bottom: 1px dotted #C4C4C4;
 }
@@ -88,7 +113,7 @@
   }
 
   h2 {
-    margin-top: 20px;
+    margin: 20px 0;
     font-family: $nunito;
     font-weight: 700;
     color: #2B2E30;
@@ -100,6 +125,21 @@
     font-weight: 200;
     color: #676A6C;
     font-size: 14px;
+  }
+
+  @include for-medium-devices-down {
+
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @include for-phone-only {
+    padding: 0 20px;
   }
 }
 
@@ -113,6 +153,10 @@
     font-weight: 200;
     color: #98BFBD;
     font-size: 16px;
+  }
+
+  @include for-medium-devices-down {
+    display: none;
   }
 }
 
@@ -137,7 +181,7 @@
   }
 
   &_content {
-    padding: 10px 20px;
+    padding:  10px 0 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -165,7 +209,6 @@
 }
 
 .posts-index-second {
-  height: 100vh;
   width: 100%;
   display: flex;
   position: relative;
@@ -173,15 +216,22 @@
 }
 
 .posts-index-common {
-  height: 100vh;
   width: 70%;
-  // background-color: red;
+  padding: 0 30px;
+
+  @include for-medium-devices-down {
+    width: 100%;
+  }
+
+  @include for-phone-only {
+    padding: 0 20px;
+  }
 }
 
 .posts-index-popular {
   padding: 20px;
   width: 30%;
-  height: 100px;
+  height: 100%;
   // background-color: #FAFAFA;
   position: -webkit-sticky;
   position: sticky;
@@ -196,14 +246,18 @@
       margin-bottom: 20px;
       border-bottom: 1px dotted #C4C4C4;
     }
+
+    @include for-medium-devices-down {
+      display: none;
+    }
 }
 
 .posts-index-common-card {
   width: 100%;
   height: 200px;
-  background-color: #fafafa;
   display: flex;
-  margin: 20px 0;
+  justify-content: space-between;
+  margin: 30px 0;
 
   &_content {
     position: relative;
@@ -214,6 +268,9 @@
       font-family: $nunito;
       font-weight: 200;
       color: #676A6C;
+      // background-color: #E9E9EA;
+      border-radius: 3px;
+      // padding: 6px 10px;
     }
 
     & h2 {
@@ -222,6 +279,10 @@
       font-weight: 700;
       color: #2B2E30;
       margin-bottom: 20px;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     & p {
@@ -239,12 +300,55 @@
       position: absolute;
         bottom: 10px;
     }
+
   }
 
   & img {
     height: 100%;
     width: 200px;
     object-fit: cover;
+
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+
+  @include for-medium-devices-down {
+
+    &_content {
+      padding-right: 25px;
+    }
+  }
+
+  @include for-phone-only {
+    align-items: flex-start;
+
+    &_content {
+
+      & h4 {
+        font-size: 13px;
+      }
+
+      & h2 {
+        font-size: 18px;
+      }
+
+      & p {
+       font-size: 13px;
+      }
+
+      & p:last-child {
+        font-size: 11px;
+        margin-bottom: 0;
+        position: relative;
+      }
+
+    }
+
+    & img {
+      width: 100px;
+      height: 50%;
+    }
   }
 }
 
