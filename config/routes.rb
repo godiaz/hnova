@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :projects
   resources :posts
   resources :services
+  resources :post_images, only: [:create]
   resources :designs do
     collection do
       get '/dashboard', to: 'designs#dashboard'

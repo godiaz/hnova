@@ -19,6 +19,9 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'social-share-button'
 gem 'gibbon'
+gem 'trix'
+gem 'shrine'
+gem 'fog-aws'
 
 
 # NEW GEMS

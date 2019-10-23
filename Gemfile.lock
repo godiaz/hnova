@@ -86,6 +86,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
+    content_disposition (1.0.0)
     crass (1.0.5)
     devise (4.7.1)
       bcrypt (~> 3.0)
@@ -99,13 +100,33 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
+    down (5.0.0)
+      addressable (~> 2.5)
     erubi (1.9.0)
+    excon (0.67.0)
     execjs (2.7.0)
     faraday (0.17.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.11.1)
+    fog-aws (3.5.2)
+      fog-core (~> 2.1)
+      fog-json (~> 1.1)
+      fog-xml (~> 0.1)
+      ipaddress (~> 0.8)
+    fog-core (2.1.2)
+      builder
+      excon (~> 0.58)
+      formatador (~> 0.2)
+      mime-types
+    fog-json (1.2.0)
+      fog-core
+      multi_json (~> 1.10)
+    fog-xml (0.1.3)
+      fog-core
+      nokogiri (>= 1.5.11, < 2.0.0)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
+    formatador (0.2.5)
     gibbon (3.3.0)
       faraday (>= 0.9.1)
       multi_json (>= 1.11.0)
@@ -116,6 +137,7 @@ GEM
       domain_name (~> 0.5)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
+    ipaddress (0.8.3)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
     jmespath (1.4.0)
@@ -214,6 +236,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    shrine (3.0.1)
+      content_disposition (~> 1.0)
+      down (~> 5.0)
     simple_form (5.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -233,6 +258,8 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    trix (0.10.1)
+      rails
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
@@ -266,6 +293,7 @@ DEPENDENCIES
   cloudinary
   devise
   dotenv-rails
+  fog-aws
   font-awesome-sass (~> 5.6.1)
   gibbon
   jbuilder (~> 2.0)
@@ -280,10 +308,12 @@ DEPENDENCIES
   rb-readline
   redis
   sassc-rails
+  shrine
   simple_form
   social-share-button
   spring
   spring-watcher-listen (~> 2.0.0)
+  trix
   uglifier
   web-console (>= 3.3.0)
   webpacker
