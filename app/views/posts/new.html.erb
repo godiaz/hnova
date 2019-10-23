@@ -1,1 +1,23 @@
-<h1>New Post</h1>
+<div class="white-space"></div>
+<br><br>
+<div class="new-post">
+  <h1>New Post</h1>
+  <br>
+  <%= simple_form_for(@post) do |f| %>
+      <p class="trix-image">Please select the main image of your article</p>
+      <br><br><br>
+
+      <%= f.text_area :title, id: "post_title", hidden: false, value: "Title of your Post" %>
+      <trix-editor input="post_title" class="trix-title"></trix-editor>
+
+
+      <%= f.text_area :body, id: "post_body", hidden: false, value: "Body of your Post"  %>
+
+      <trix-editor input="post_body" class="trix-body"></trix-editor>
+
+      <%= f.submit %>
+      <br><br><br>
+  <% end %>
+</div>
+
+

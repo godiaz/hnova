@@ -12,6 +12,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
     if @post.save
       redirect_to post_path(@post)
     else
@@ -37,10 +38,10 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    postParams = params.require(:post).permit(:title, :body, :remove_image, images:[])
+    params.require(:post).permit(:title, :body, :remove_image, :image)
   end
 
   def set_post
-    @post = post.find(params[:id])
+    @post = Post.find(params[:id])
   end
 end

@@ -1,0 +1,70 @@
+
+.new-post {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F2F4F4;
+
+  & h1 {
+    text-align: left;
+    width: 80vw;
+    font-family: $nunito;
+    font-weight: 400;
+    color: #2B2E30;
+  }
+
+  & form {
+    width: 80vw;
+  }
+}
+
+
+.trix-title {
+  background-color: white;
+  border: 1px solid #fafafa;
+  border-radius: 3px;
+  margin: 30px 0;
+  min-height: 100px;
+  padding: 20px;
+  font-weight: 300;
+  overflow-x: scroll;
+
+  &:focus {
+    border: 1px dotted #444444;
+    outline: 0;
+  }
+}
+
+.trix-body {
+  background-color: white;
+  border: 1px solid #fafafa;
+  border-radius: 3px;
+  margin: 30px 0;
+  min-height: 400px;
+  padding: 20px;
+  font-weight: 300;
+  overflow-x: scroll;
+
+  &:focus {
+    border: 1px dotted #444444;
+    outline: 0;
+  }
+}
+
+.trix-button {
+  color: white;
+  background-color: $color-1;
+}
+
+
+.trix-image {
+  color: white;
+  font-family: $main-font;
+  background-color: $color-1;
+  font-weight: 300;
+  padding: 5px 10px;
+  border-radius: 50px;
+  opacity: 0.9;
+}
