@@ -1,3 +1,5 @@
+require 'pry'
+
 class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
@@ -13,7 +15,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
-    raise
+    binding.pry
     if @post.save
       redirect_to post_path(@post)
     else
