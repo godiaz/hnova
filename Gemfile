@@ -22,6 +22,7 @@ gem 'gibbon'
 gem 'trix'
 gem 'shrine'
 gem 'fog-aws'
+gem 'jquery-rails'
 # gem 'pry'
 # gem 'pry-rails'
 
