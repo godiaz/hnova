@@ -22,7 +22,8 @@ gem 'gibbon'
 gem 'trix'
 gem 'shrine'
 gem 'fog-aws'
-
+gem 'pry'
+gem 'pry-rails'
 
 # NEW GEMS
 gem 'cloudinary'
