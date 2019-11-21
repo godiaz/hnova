@@ -4,28 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title><%= meta_title %></title>
-    <meta name="description" content="<%= meta_description %>">
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.0/trix.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.0/trix.css">
 
-    <!-- Facebook Open Graph data -->
-    <meta property="og:title" content="<%= meta_title %>" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="<%= request.original_url %>" />
-    <meta property="og:image" content="<%= meta_image %>" />
-    <meta property="og:description" content="<%= meta_description %>" />
-    <meta property="og:site_name" content="<%= meta_title %>" />
+    <title>
+          <% if content_for? :title %>
+            <%= "#{yield :title}" %>
+          <% else %>
+           London Web Development & App Development | Hoxton Digital
+          <% end %>
+        </title>
+        <meta name="description" content=
+          <% if content_for? :description %>
+            "<%= "#{yield :description}" %>"
+          <% else %>
+            "London Web Development Agency | Hoxton Digital | London Based Web Development | Website Builders | Website Company | Web Design | Mobile Apps"
+          <% end %>
+        >
 
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
-    <meta name="twitter:title" content="<%= meta_title %>">
-    <meta name="twitter:description" content="<%= meta_description %>">
-    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
-    <meta name="twitter:image:src" content="<%= meta_image %>">
+        <!-- Facebook Open Graph data -->
+        <meta property="og:title" content=
+          <% if content_for? :title %>
+            "<%= "#{yield :title}" %>"
+          <% else %>
+            "London Web Development & App Development | Hoxton Digital"
+          <% end %>
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content=
+          <% if content_for? :image %>
+            <%= "#{yield :image}" %>
+          <% else %>
+            https://res.cloudinary.com/hoxton-digital/image/upload/v1571928979/meta-image.png
+          <% end %>
+        />
+        <meta property="og:description" content=
+          <% if content_for? :description %>
+            "<%= "#{yield :description}" %>"
+          <% else %>
+          "London Web Development Agency | Hoxton Digital | London Based Web Development | Website Builders | Website Company | Web Design | Mobile Apps"
+          <% end %>
+        />
+        <meta property="og:site_name" content="Silver Swan Search" />
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image">
+        <!-- <meta name="twitter:site" content="<%#= DEFAULT_META["twitter_account"] %>"> -->
+        <meta name="twitter:title" content=
+          <% if content_for? :title %>
+            "<%= "#{yield :title}" %>"
+          <% else %>
+             "London Web Development & App Development | Hoxton Digital"
+          <% end %>
+        >
+        <meta name="twitter:description" content=
+          <% if content_for? :description %>
+            "<%= "#{yield :description}" %>"
+          <% else %>
+            "London Web Development Agency | Hoxton Digital | London Based Web Development | Website Builders | Website Company | Web Design | Mobile Apps"
+          <% end %>
+        >
+        <meta name="twitter:image" content=
+          <% if content_for? :image %>
+            <%= "#{yield :image}" %>
+          <% else %>
+            https://res.cloudinary.com/hoxton-digital/image/upload/v1571928979/meta-image.png
+          <% end %>
+        >
 
     <!--Start of Zendesk Chat Script-->
     <script type="text/javascript">
