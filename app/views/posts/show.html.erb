@@ -1,5 +1,16 @@
+<% content_for :title, "#{@post.title.match(/\>(.+)\</)[1]}"%>
+<% content_for :description, "#{@post.body}" %>
+<% if @post.body.match(/img/) %>
+  <% content_for :image, "#{@post.body.match(/img src=\"([\w\:\/\.\*\-]+)/)[1]}" %>
+<% else %>
+<% end %>
+
 <div class="white-space"></div>
 <div class="post">
-  <%= sanitize @post.title %>
-  <%= sanitize @post.body %>
+  <div class="post-container">
+    <%= sanitize @post.title %>
+    <%= @post.created_at %>
+    <%= sanitize @post.body %>
+  </div>
 </div>
+

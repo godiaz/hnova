@@ -1,7 +1,14 @@
 import "bootstrap";
+import hljs from 'highlight.js';
+import 'highlight.js/styles/monokai.css';
 
 $(document).ready(function() {
-  console.log(Trix.config)
+  $('pre').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+
+$(document).ready(function() {
 
   Trix.config.attachments.preview.caption = {
     name: false,
@@ -16,7 +23,6 @@ $(document).ready(function() {
     var form = new FormData;
     var endpoint = "/post_images";
 
-    console.log(file);
     form.append("Content-Type", file.type);
     form.append("post_image[photo]", file);
 

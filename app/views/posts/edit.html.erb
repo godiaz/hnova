@@ -1,1 +1,19 @@
-<h1>Edit Post</h1>
+<div class="white-space"></div>
+<br><br>
+<div class="new-post">
+  <h1>Edit Post</h1>
+  <br>
+  <%= simple_form_for(@post) do |f| %>
+    <br><br>
+
+    <input id="post_title" name="post[title]" value="<%= @post.title %>" type="hidden" name="content">
+    <trix-editor input="post_title" class="trix-title">   </trix-editor>
+
+    <input id="post_body" name="post[body]" value="<%= @post.body %>" type="hidden" name="content">
+    <trix-editor input="post_body" value="<%= @post.body %>" class="trix-body"></trix-editor>
+
+    <%= f.submit %>
+    <br><br><br>
+  <% end %>
+</div>
+

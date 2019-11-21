@@ -8,7 +8,6 @@ class PostImagesController < ApplicationController
 
     respond_to do |format|
       if @image.save
-        # binding.pry
         format.json { render json: { url: @image.photo_url }, status: :ok }
       else
         format.json { render json: @image.errors, status: :unprocessable_entity }
