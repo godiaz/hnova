@@ -18,13 +18,13 @@
   }
 
   &_background {
-    background-image: url('https://res.cloudinary.com/hoxton-digital/image/upload/q_auto/v1568821323/services_hoxton_digital.gif');
+    background-image: url('https://images.pexels.com/photos/845451/pexels-photo-845451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-position: center bottom;
     height: 700px;
     width: 100%;
     background-size: cover;
     transition: 0.5s;
-    filter: brightness(90%);
+    filter: brightness(70%);
     z-index: 1;
 
     @include for-xlarge-devices-down {
@@ -36,7 +36,7 @@
     }
 
     @include for-phone-only {
-      background-image: url('https://res.cloudinary.com/hoxton-digital/image/upload/q_auto/v1568821323/services_hoxton_digital.gif');
+      background-image: url('https://images.pexels.com/photos/845451/pexels-photo-845451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
       background-position: center;
     }
   }

@@ -42,8 +42,9 @@
   }
 
   &_background {
-    background-image: url('https://res.cloudinary.com/hoxton-digital/image/upload/q_auto/v1565088634/rectangles.gif');
+    background-image: url('https://images.pexels.com/photos/2092075/pexels-photo-2092075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-position: center;
+    object-fit: cover;
     height: 700px;
     width: 100%;
     background-size: cover;
@@ -64,7 +65,7 @@
     }
 
     @include for-phone-only {
-      background-image: url('https://res.cloudinary.com/hoxton-digital/image/upload/q_auto/v1561030272/hoxtontriangle.gif');
+      background-image: url('https://images.pexels.com/photos/2092075/pexels-photo-2092075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     }
   }
 }
