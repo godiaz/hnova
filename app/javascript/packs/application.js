@@ -1,6 +1,5 @@
 import "bootstrap";
 import hljs from 'highlight.js';
-console.log(hljs);
 import 'highlight.js/styles/monokai.css';
 
 $(document).ready(function() {
