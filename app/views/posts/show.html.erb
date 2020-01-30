@@ -1,16 +1,31 @@
 <% content_for :title, "#{@post.title.match(/\>(.+)\</)[1]}"%>
 <% content_for :description, "#{@post.body}" %>
 <% if @post.body.match(/img/) %>
-  <% content_for :image, "#{@post.body.match(/img src=\"([\w\:\/\.\*\-]+)/)[1]}" %>
+  <%# content_for :image, "#{@post.body.match(/img src=\"([\w\:\/\.\*\-]+)/)[1]}" %>
 <% else %>
 <% end %>
 
 <div class="white-space"></div>
+<div class="post-space"></div>
 <div class="post">
   <div class="post-container">
-    <%= sanitize @post.title %>
-    <%= @post.created_at %>
-    <%= sanitize @post.body %>
+    <span class="post-category">RubyOnRails</span>
+    <h2 class="post-header"><%= sanitize @post.title %></h2>
+    <div class="post-details">
+      <div class="post-avatar-container">
+        <% if @post.user.image.attached? %>
+          <%= image_tag @post.user.image, class: "post-avatar" %>
+        <% else %>
+          <%= image_tag 'profile-icon.png', class: "post-avatar" %>
+        <% end %>
+      </div>
+      <div class="post-details-user-date">
+        <p><%= @post.user.first_name %> <%= @post.user.last_name %></p>
+        <p><%= @post.created_at.strftime("%B %d,%Y") %></p>
+      </div>
+    </div>
+    <%= sanitize @post.body, class: "post-body" %>
   </div>
 </div>
+
 
