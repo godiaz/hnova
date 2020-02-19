@@ -11,7 +11,7 @@
         <%= link_to post_path(post) do %>
           <div class="post">
               <% if post.image.attached?  %>
-                <%= imgage_tag post.image, class: "post-image" %>
+                <%= image_tag post.image, class: "post-image" %>
               <% else %>
                 <i class="far fa-image no-image-post"></i>
               <% end %>

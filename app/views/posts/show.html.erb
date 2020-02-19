@@ -26,7 +26,9 @@
         <p><%= @post.created_at.strftime("%B %d,%Y") %></p>
       </div>
     </div>
-    <%= sanitize @post.body, class: "post-body" %>
+    <div class="post-body">
+      <%= sanitize @post.body, class: "post-body" %>
+    </div>
   </div>
 </div>
 
