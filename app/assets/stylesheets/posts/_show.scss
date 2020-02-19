@@ -51,6 +51,10 @@
   font-weight: 500;
   color: #161B21;
   font-family: $merriweather;
+
+  @include for-small-devices-down {
+    font-size: 35px;
+  }
 }
 
 .post-avatar {
@@ -88,5 +92,6 @@
 
 .post-body img {
   width: 100vw;
+  height: auto;
   object-fit: contain;
 }
