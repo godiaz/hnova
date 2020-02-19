@@ -3,7 +3,7 @@
     <div class="posts-header">
       <hr align="left">
       <h2>Tech Blog</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <p>Welcome to Hoxton Digital's Tech Blog! Thanks to our collaborators, founders & clients we'll be able to share a number of articles for techies and non-techies interested in Technology. From articles, to how-tos, we'll be posting all sorts of content to keep you up to date in the tech world. Enjoy!</p>
     </div>
     <%= paginate @posts %>
     <div class="posts">
@@ -11,13 +11,17 @@
         <%= link_to post_path(post) do %>
           <div class="post">
               <% if post.image.attached?  %>
-                <%= imgage_tag post.image, class: "post-image" %>
+                <%= image_tag post.image, class: "post-image" %>
               <% else %>
-                <i class="far fa-image no-image-post"></i>
+                <%= image_tag 'https://images.pexels.com/photos/132340/pexels-photo-132340.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', class: "post-image" %>
               <% end %>
               <div class="post-text">
                 <%= sanitize post.title %>
-                <%= sanitize post.body.truncate(60) %>
+                <%= sanitize post.body.truncate(80) %>
+              </div>
+              <div class="post-go">
+                <p>Read Article</p>
+                <i class="fas fa-angle-right"></i>
               </div>
           </div>
         <% end %>

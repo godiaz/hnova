@@ -41,7 +41,7 @@
 .posts {
   display: grid;
   grid-column-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-row-gap: 20px;
   padding-bottom: 80px;
 
@@ -64,31 +64,22 @@
 
 .post {
   border: 1px solid #F2F4F4;
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 3px;
-  height: 300px;
+  height: 470px;
   overflow: hidden;
 }
 
-.no-image-post {
-  height: 70%;
-  width: 100%;
-  background-image: url('https://images.pexels.com/photos/132340/pexels-photo-132340.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-  background-size: cover;
-  background-position: bottom;
-}
-
-.no-image-post {
-  color: white !important;
-  padding: 10px;
-  font-size: 30px !important;
-}
-
 .post-image {
-  height: 70%;
+  height: 65%;
   width: 100%;
   object-fit: cover;
+
+  &:hover {
+    filter: brightness(90%);
+  }
 }
 
 .post-text {
@@ -97,9 +88,9 @@
 
 .post-text div:first-child {
   color: $color-5;
-  font-size: 14px;
-  font-family: $nunito;
-  font-weight: 600;
+  font-size: 18px;
+  font-family: $main-text;
+  font-weight: 500;
 }
 
 .post-text div:last-child {
@@ -124,6 +115,33 @@
 
 .page-link:hover {
   color: $color-1-dark;
+}
+
+.post-go {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 20px;
+  background-color: #FAFAFA;
+
+  &:hover {
+    background-color: #EAEAEA;
+  }
+}
+
+.post-go p, i {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: gray;
+  font-size: 12px !important;
+}
+
+.post-go a {
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 
