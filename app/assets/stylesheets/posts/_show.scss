@@ -81,6 +81,13 @@
   }
 }
 
+
 .single-post strong {
   font-weight: 800;
-}
+
+.post-body img {
+  width: 100vw;
+  object-fit: cover;
+  &:target {
+    color: blue !important;
+  }

@@ -9,6 +9,12 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+  $('`').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+
+$(document).ready(function() {
 
   Trix.config.attachments.preview.caption = {
     name: false,
