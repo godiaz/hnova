@@ -129,6 +129,8 @@ GEM
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
     formatador (0.2.5)
+    friendly_id (5.2.5)
+      activerecord (>= 4.0.0)
     gibbon (3.3.1)
       faraday (>= 0.9.1)
       multi_json (>= 1.11.0)
@@ -314,6 +316,7 @@ DEPENDENCIES
   faker
   fog-aws
   font-awesome-sass (~> 5.6.1)
+  friendly_id (~> 5.2.4)
   gibbon
   jbuilder (~> 2.0)
   jquery-rails

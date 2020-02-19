@@ -23,6 +23,7 @@ gem 'trix'
 gem 'shrine'
 gem 'fog-aws'
 gem 'jquery-rails'
+gem 'friendly_id', '~> 5.2.4'
 # gem 'pry'
 # gem 'pry-rails'
 
