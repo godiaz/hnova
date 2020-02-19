@@ -29,7 +29,8 @@ gem 'jquery-rails'
 # NEW GEMS
 gem 'cloudinary'
 gem 'mini_magick'
-
+gem 'faker'
+gem 'kaminari'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

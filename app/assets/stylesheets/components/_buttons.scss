@@ -28,3 +28,39 @@
   background-color: $color-3;
   padding: 10px 20px;
 }
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  border-radius: 3px;
+  background-color: $color-1;
+  width: 70px;
+  height: 32px;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color-1-dark;
+  }
+}
+
+.back-button a {
+  margin: 0;
+}
+
+.back-button a {
+  color: white;
+  font-size: 12px;
+  font-family: $nunito;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.back-button i {
+  font-size: 8px;
+  margin-right: 10px;
+}
+

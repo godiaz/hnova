@@ -1,0 +1,208 @@
+<div class="white-space"></div>
+<div class="posts-index">
+  <div class="posts-container">
+    <div class="posts-index-headers">
+<!--       <h1>The Hoxton Magazine</h1>
+      <p>Stay updated with the latest tech news, articles and guides for code.</p> -->
+    </div>
+    <div class="posts-index-filters">
+      <a>HOME</a>
+      <a>FAVORITES</a>
+      <a>RUBY GUIDE</a>
+      <a>HOW TO</a>
+      <a>NEWS</a>
+      <a>DEV LIFESTYLE</a>
+    </div>
+    <div class="posts-index-first">
+      <div class="posts-index-first-main-news">
+        <a href="/posts">
+          <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Hoxton Digital Website builders">
+          <h2>Meet the 2 Investors That Have Disrupted the Food Industry</h2>
+          <p>This is a little bit of text to explain what the article is about what people should expect to read.</p>
+          <a href="/posts">Top News in Ruby</a>
+        </a>
+      </div>
+      <div class="posts-index-first-main-list">
+          <h2>Latest News</h2>
+          <% @posts.last(3).each do |post| %>
+            <%= link_to post_path(post), class: "latest-news-card" do %>
+              <% if post.image.attached? %>
+              <!-- @post.image.present? will always return true, use attached? to check presence -->
+                  <%= image_tag post.image %>
+              <% end %>
+              <div class="latest-news-card_content">
+                <h3><%= sanitize post.title %></h3>
+                <p><%= sanitize post.body.truncate(100) %></p>
+                <p><%= post.created_at.strftime("%B %d,%Y") %></p>
+              </div>
+            <% end %>
+          <% end %>
+      </div>
+    </div>
+    <div class="posts-index-second">
+      <div class="posts-index-common">
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="posts-index-common-card">
+          <div class="posts-index-common-card_content">
+            <h4>PROGRAMMING SKILLS</h4>
+            <h2>The New App That is Making The Top</h2>
+            <p>This is a little bit of text to explain what the article is about what people should expect to read. </p>
+            <p>December 18, 2018</p>
+          </div>
+          <img src="https://images.pexels.com/photos/2543071/pexels-photo-2543071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+      </div>
+      <div class="posts-index-popular">
+          <h2>Popular for Programmers</h2>
+          <div class="posts-index-popular-card">
+            <div class="posts-index-popular-card_header">
+              <p>01</p>
+            </div>
+            <div class="posts-index-popular-card_content">
+              <h3>How I Made a Million Pounds in Less than a Year</h3>
+              <p>Ruby On Rails Elemental</p>
+              <p>September 28, 2019</p>
+            </div>
+          </div>
+          <a class="posts-index-popular-card">
+            <div class="posts-index-popular-card_header">
+              <p>02</p>
+            </div>
+            <div class="posts-index-popular-card_content">
+              <h3>How I Made a Million Pounds in Less than a Year</h3>
+              <p>Ruby On Rails Elemental</p>
+              <p>September 28, 2019</p>
+            </div>
+          </a>
+          <a class="posts-index-popular-card">
+            <div class="posts-index-popular-card_header">
+              <p>03</p>
+            </div>
+            <div class="posts-index-popular-card_content">
+              <h3>How I Made a Million Pounds in Less than a Year</h3>
+              <p>Ruby On Rails Elemental</p>
+              <p>September 28, 2019</p>
+            </div>
+          </a>
+          <a class="posts-index-popular-card">
+            <div class="posts-index-popular-card_header">
+              <p>04</p>
+            </div>
+            <div class="posts-index-popular-card_content">
+              <h3>How I Made a Million Pounds in Less than a Year</h3>
+              <p>Ruby On Rails Elemental</p>
+              <p>September 28, 2019</p>
+            </div>
+          </a>
+          <a class="posts-index-popular-card">
+            <div class="posts-index-popular-card_header">
+              <p>05</p>
+            </div>
+            <div class="posts-index-popular-card_content">
+              <h3>How I Made a Million Pounds in Less than a Year</h3>
+              <p>Ruby On Rails Elemental</p>
+              <p>September 28, 2019</p>
+            </div>
+          </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,7 @@
   <br>
   <%= simple_form_for(@post) do |f| %>
     <br><br>
+    <%= f.input :image, as: :file %>
 
     <input id="post_title" name="post[title]" value="<%= @post.title %>" type="hidden" name="content">
     <trix-editor input="post_title" class="trix-title">   </trix-editor>
