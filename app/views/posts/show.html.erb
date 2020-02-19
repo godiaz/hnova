@@ -1,4 +1,5 @@
 <%# content_for :title, "#{@post.title.match(/\>(.+)\</)[1]}"%>
+<% content_for :title, "#{@post.title.match(/\>(.+)\</)[1]}"%>
 <% content_for :description, "#{@post.body}" %>
 <% if @post.body.match(/img/) %>
   <%# content_for :image, "#{@post.body.match(/img src=\"([\w\:\/\.\*\-]+)/)[1]}" %>
@@ -14,16 +15,29 @@
 <!--     <span class="post-category">RubyOnRails</span> -->
     <h2 class="post-header"><%= sanitize @post.title %></h2>
     <div class="post-details">
-      <div class="post-avatar-container">
-        <% if @post.user.image.attached? %>
-          <%= image_tag @post.user.image, class: "post-avatar" %>
-        <% else %>
-          <%= image_tag 'profile-icon.png', class: "post-avatar" %>
-        <% end %>
+      <div class="post-author">
+        <div class="post-avatar-container">
+          <% if @post.user.image.attached? %>
+            <%= image_tag @post.user.image, class: "post-avatar" %>
+          <% else %>
+            <%= image_tag 'profile-icon.png', class: "post-avatar" %>
+          <% end %>
+        </div>
+        <div class="post-details-user-date">
+          <p><%= @post.user.first_name %> <%= @post.user.last_name %></p>
+          <p><%= @post.created_at.strftime("%B %d,%Y") %></p>
+        </div>
       </div>
-      <div class="post-details-user-date">
-        <p><%= @post.user.first_name %> <%= @post.user.last_name %></p>
-        <p><%= @post.created_at.strftime("%B %d,%Y") %></p>
+      <div class="post-media">
+        <%= link_to "http://www.facebook.com/sharer/sharer.php?u=#{post_url(@post)}&t=#{@post.title}", target: "_blank" do %>
+         <i class="fab fa-facebook-square"></i>
+        <% end %>
+        <%= link_to "https://twitter.com/intent/tweet?text=#{@post.title}&url=#{post_url(@post)}", target: "_blank" do %>
+          <i class="fab fa-twitter"></i>
+        <% end %>
+        <%= mail_to '', subject: @post.title, body: post_url(@post) do %>
+          <i class="far fa-envelope"></i>
+        <% end %>
       </div>
     </div>
     <div class="post-body">
