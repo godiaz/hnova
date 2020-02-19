@@ -7,7 +7,7 @@
     </div>
     <%= paginate @posts %>
     <div class="posts">
-      <% @posts.each do |post| %>
+      <% @posts.reverse.each do |post| %>
         <%= link_to post_path(post) do %>
           <div class="post">
               <% if post.image.attached?  %>
