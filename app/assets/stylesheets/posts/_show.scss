@@ -95,3 +95,11 @@
   height: auto;
   object-fit: contain;
 }
+
+.single-post blockquote {
+  padding: 5%;
+  font-family: $merriweather;
+  color: #888888;
+  font-size: 30px;
+  font-weight: 300 !important;
+}
