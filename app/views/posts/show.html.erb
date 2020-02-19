@@ -15,13 +15,13 @@
         <i class="fas fa-chevron-left"></i>Back
       </a>
       <div class="mobile-post-media">
-        <%= link_to "http://www.facebook.com/sharer/sharer.php?u=#{post_url(@post)}&t=#{sanitize @post.title}", target: "_blank" do %>
+        <%= link_to "http://www.facebook.com/sharer/sharer.php?u=#{post_url(@post)}&t=#{ @post.title.html_safe }", target: "_blank" do %>
          <i class="fab fa-facebook-square"></i>
         <% end %>
         <%= link_to "https://twitter.com/intent/tweet?text=#{sanitize @post.title}&url=#{post_url(@post)}", target: "_blank" do %>
           <i class="fab fa-twitter"></i>
         <% end %>
-        <%= mail_to '', subject: @post.title.strip, body: post_url(@post) do %>
+        <%= mail_to '', subject: @post.title.html_safe, body: post_url(@post) do %>
           <i class="far fa-envelope"></i>
         <% end %>
       </div>
