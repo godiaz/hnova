@@ -1,6 +1,7 @@
 <%# content_for :title, "#{@post.title.match(/\>(.+)\</)[1]}"%>
 <% content_for :title, "#{@post.title.match(/\>(.+)\</)[1]}"%>
 <% content_for :description, "#{@post.body}" %>
+<% content_for :image, "https://www.hoxton-digital.com#{@post.image}" %>
 <% if @post.body.match(/img/) %>
   <%# content_for :image, "#{@post.body.match(/img src=\"([\w\:\/\.\*\-]+)/)[1]}" %>
 <% else %>
