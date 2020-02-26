@@ -20,7 +20,7 @@
 
     @include for-medium-devices-down {
       font-size: 68px;
-      width: 100%;
+      width: 90%;
     }
 
     @include for-small-devices-down {
@@ -945,7 +945,10 @@
   height: 600px;
   background-color: #161E39;
   margin: 30px 0;
-  @include absCenterSA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
 
   &_part-one {
     display: flex;
@@ -994,9 +997,20 @@
     }
   }
 
+  &_part-three {
+    width: 400px;
+    color: white;
+    font-weight: 300;
+
+    & i {
+      color: #F4C93D;
+    }
+  }
+
   @include for-medium-devices-down {
-    height: 1000px;
+    height: 100%;
     @include absCenterColumn;
+    padding: 60px 0;
 
     &_part-one {
       margin-bottom: 40px;
@@ -1013,6 +1027,11 @@
         line-height: 40px;
         font-weight: 500;
       }
+    }
+
+    &_part-three {
+      display: none;
+      margin: 50px 0;
     }
   }
 
