@@ -1,3 +1,50 @@
+.hd-purple-button {
+  background-color: $color-1;
+  padding: 8px 55px;
+  color: white;
+  border-radius: 50px;
+  font-size: 16px;
+  border: 1px solid $color-1-lighter;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  // width: 40vw;
+
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: $color-1-dark;
+  }
+
+  @include for-phone-only {
+    // width: 80vw;
+  }
+}
+
+.hd-white-button {
+  background-color: white;
+  padding: 8px 25px;
+  color: $color-1;
+  border-radius: 50px;
+  font-size: 16px;
+  text-align: center;
+  // width: 40vw;
+  border: 1px solid white;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: $color-1-lighter;
+    border: 1px solid white;
+  }
+
+  @include for-small-devices-down {
+    // width: 80vw;
+  }
+}
+
+
 .purple-button {
   background-color: #6E44FF;
   color: white;

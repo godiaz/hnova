@@ -1,32 +1,17 @@
 <div class="white-space"></div>
-  <div class="home-1">
-    <div class="home-1_background"></div>
-    <h3>A LØNDON BASED WEB DEVELØPMENT AGENCY </h3>
-    <input type="checkbox" class="navigation_checkbox" id="navi-toggle">
-<!--     <label for="navi-toggle" class="navigation_button">
-      <i class="fas fa-share-alt"></i>
-    </label> -->
-<!--     <ul class="navigation_list">
-      <li class="navigation_link">
-        <a href="whatsapp://send?text=<%= request.original_url %>">
-          <i class="fab fa-facebook">
-          </i>
-        </a>
-      </li>
-
-      <li class="navigation_link">
-        <i class="fab fa-linkedin-in"></i>
-      </li>
-
-      <li class="navigation_link">
-        <i class="fab fa-instagram"></i>
-      </li>
-
-      <li class="navigation_link">
-        <i class="fas fa-at"></i>
-      </li>
-    </ul> -->
+  <div class="home-hero-banner">
+    <h3> LØNDON WEB & MOBILE DEVELØPMENT AGENCY </h3>
+    <br>
+    <div class="home-hero-banner-buttons">
+      <a href="/contact" class="hd-purple-button">Get a Quote</a>
+      <a href="/contact" class="hd-white-button">Speak to a Specialist</a>
+    </div>
   </div>
+<!--   <div class="home-1">
+    <div class="home-1_background"></div>
+    <h3> LØNDON WEB & MOBILE DEVELØPMENT AGENCY </h3>
+    <button>Get A Quote</button>
+  </div> -->
   <div class="home-2">
     <div class="home-2_container">
       <h4><span>Services</span> we provide</h4>
@@ -58,29 +43,6 @@
         <% end %>
       </div>
     </div>
-<!--     <div class="home-2_content">
-      <h4><span>Services</span> we provide</h4>
-      <div class="home-2_services-container">
-        <div class="home-2_card">
-          <hr align="left">
-          <p>Services Directory</p>
-          <h6 class="home-2_card_h6">Discover All The Different <span>Services</span> That Hoxton Digital has to <span>Offer</span></h6>
-          <%= link_to services_path do %>
-            <button>Right Here</button>
-          <% end %>
-        </div>
-        <% @services.first(4).each do |service|  %>
-          <div class="home-2_card">
-            <% if service.images.attached? %>
-              <%= image_tag service.images.first %>
-            <% else %>
-              <%= image_tag 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
-            <% end %>
-            <h6><%= link_to service.title, services_path %></h6>
-          </div>
-        <% end %>
-      </div>
-    </div> -->
   </div>
   <div class="home-3">
     <div class="home-3_container">

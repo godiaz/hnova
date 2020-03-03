@@ -1,72 +1,67 @@
 // Specific CSS for your home-page
-
-
-.home-1 {
-  position: relative;
+.home-hero-banner {
+  background-image: linear-gradient(rgba(0,0,0,0.60)),url('https://images.pexels.com/photos/220769/pexels-photo-220769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+  height: 650px;
+  width: 100%;
+  padding: 0 40px;
+  //orientation
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
   & h3 {
-    position: absolute;
-      bottom: 20px;
-      left: 60px;
-    width: 60%;
-    padding: 20px;
+    width: 80vw;
+    text-align: left;
     color: white;
     font-weight: 800;
-    font-size: 96px;
+    font-size: 80px;
+  }
 
-    @include for-large-devices-down {
-      font-size: 78px;
-    }
-
-    @include for-medium-devices-down {
-      font-size: 68px;
-      width: 90%;
-    }
-
-    @include for-small-devices-down {
-      font-size: 62px;
-      bottom: 10px;
-      left: 10px;
-    }
-
-    @include for-phone-only {
-      font-size: 43px;
-      width: 90%;
-      bottom: 10px;
-      left: 10px;
-    }
-
-    @include for-small-phone-only {
-      font-size: 37px;
+  @include for-large-devices-down {
+    & h3 {
+      width: 100vw;
+      font-size: 75px;
     }
   }
 
-  &_background {
-    background-image: url('https://images.pexels.com/photos/220769/pexels-photo-220769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    background-position: center;
-    object-fit: cover;
-    height: 700px;
-    width: 100%;
-    background-size: cover;
-    transition: 0.5s;
-    filter: brightness(50%);
-
-    &:hover {
-      transition: 0.5s;
-      filter: brightness(70%);
+  @include for-medium-devices-down {
+    & h3 {
+      font-size: 60px;
     }
+  }
 
-    @include for-xlarge-devices-down {
-      height: 600px;
+  @include for-small-devices-down {
+    & h3 {
+      font-size: 40px;
+      text-align: center;
     }
+    align-items: center;
+  }
 
-    @include for-large-devices-down {
-      height: 500px;
+  @include for-phone-only {
+    & h3 {
+      font-size: 35px;
+      text-align: left;
+      width: 80vw;
     }
+  }
 
-    @include for-phone-only {
-      background-image: url('https://images.pexels.com/photos/220769/pexels-photo-220769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    }
+  @include for-small-phone-only {
+
+  }
+}
+
+.home-hero-banner-buttons {
+  @include for-small-devices-down {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include for-phone-only {
+    width: 80vw;
   }
 }
 
