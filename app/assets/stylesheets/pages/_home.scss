@@ -315,11 +315,12 @@
 .home-2 {
   display: flex;
   justify-content: center !important;
+  padding: 0 40px;
 
   &_container {
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 100vw;
 
     @include for-phone-only {
       width: 100vw;
@@ -330,7 +331,6 @@
       font-weight: 200;
       text-align: left;
       margin-bottom: 30px;
-      margin-left: 10px;
       margin-top: 60px;
       width: 100%;
 
@@ -385,7 +385,6 @@
     height: 380px;
     max-width: 380px;
     background-color: white;
-    margin: 10px;
     padding: 10px;
     border: 1px solid #E0E7EB;
     flex: 0 1 24%;
@@ -564,11 +563,12 @@
 .home-3 {
   display: flex;
   justify-content: center !important;
+  padding: 0 40px;
 
   &_container {
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 100vw;
 
     @include for-phone-only {
       width: 100vw;
@@ -579,7 +579,6 @@
       font-weight: 200;
       text-align: left;
       margin-top: 60px;
-      margin-left: 10px;
       width: 100%;
 
       & span {
@@ -632,7 +631,6 @@
     height: 380px;
     max-width: 380px;
     background-color: white;
-    margin: 10px;
     padding: 10px;
     border: 1px solid #E0E7EB;
     flex: 0 1 24%;
@@ -750,9 +748,10 @@
 
 .home-4 {
   @include absCenter;
+  // padding: 0 40px;
 
   &_reviews {
-    width: 78vw;
+    width: 100vw;
     background-color: white;
     padding: 40px;
     margin-bottom: 40px;
@@ -799,7 +798,7 @@
 
     &_button-1 {
       margin: 0 20px 20px 0;
-      background-color: $color-2;
+      background-color: $primary-color;
       border-radius: 50px;
       color: white;
       padding: 7px 30px;
@@ -808,7 +807,7 @@
       font-size: 16px;
 
       &:hover {
-        background-color: $color-2-dark;
+        background-color: $color-1-dark;
         text-decoration: none !important;
       }
 
@@ -912,7 +911,7 @@
     }
 
     @include for-xxlarge-devices-down {
-      width: 90vw;
+      width: 100vw;
 
       &_card {
         width: 30%;
@@ -925,8 +924,8 @@
     }
 
     @include for-xlarge-devices-down {
-      width: 80vw;
-      padding: 100px;
+      width: 100vw;
+      padding: 100px 40px;
 
       &_container {
         flex-wrap: wrap;
@@ -942,8 +941,8 @@
     }
 
     @include for-large-devices-down {
-      width: 90vw;
-      padding: 100px 50px;
+      width: 100vw;
+      padding: 100px 40px;
 
       & h5:first-child {
         line-height: 65px;
@@ -963,8 +962,8 @@
     }
 
     @include for-medium-devices-down {
-      width: 80vw;
-      padding: 100px 80px;
+      width: 100vw;
+      padding: 100px 40px;
 
       &_container {
         flex-wrap: wrap;
@@ -978,8 +977,8 @@
     }
 
     @include for-small-devices-down {
-      width: 90vw;
-      padding: 100px 80px;
+      width: 100vw;
+      padding: 100px 40px;
 
       &_container {
         flex-wrap: wrap;
@@ -994,7 +993,7 @@
 
     @include for-phone-only {
       width: 100%;
-      padding: 40px 20px;
+      padding: 40px 40px;
 
       &_container {
         flex-wrap: wrap;
@@ -1050,7 +1049,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 40px;
 
   &_part-one {
     display: flex;

@@ -1,10 +1,10 @@
 .hd-purple-button {
-  background-color: $color-1;
+  background-color: $primary-color;
   padding: 8px 55px;
   color: white;
   border-radius: 50px;
   font-size: 16px;
-  border: 1px solid $color-1-lighter;
+  border: 1px solid white;
   margin-right: 15px;
   margin-bottom: 15px;
   text-align: center;
@@ -14,7 +14,8 @@
   &:hover {
     text-decoration: none;
     color: white;
-    background-color: $color-1-dark;
+    background-color: $primary-color-dark;
+    border: 1px solid white;
   }
 
   @include for-phone-only {
@@ -35,7 +36,7 @@
   &:hover {
     text-decoration: none;
     color: white;
-    background-color: $color-1-lighter;
+    background-color: $primary-color-dark;
     border: 1px solid white;
   }
 
