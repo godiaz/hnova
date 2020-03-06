@@ -89,14 +89,14 @@
 .post-text div:first-child {
   color: $color-5;
   font-size: 18px;
-  font-family: $main-text;
+  font-family: $text;
   font-weight: 500;
 }
 
 .post-text div:last-child {
   color: gray;
   font-size: 14px;
-  font-family: $nunito;
+  font-family: $text;
   font-weight: 300;
 }
 
@@ -179,7 +179,7 @@
 //   }
 
 //   & p {
-//     font-family: $nunito;
+//     font-family: $text;
 //     font-weight: 200;
 //     font-size: 18px;
 //     text-align: center;
@@ -210,7 +210,7 @@
 //   & a {
 //     overflow-x: scroll;
 //     width: 120px;
-//     font-family: $nunito;
+//     font-family: $text;
 //     font-weight: 200;
 //     color: #545454;
 //     cursor: pointer;
@@ -240,7 +240,7 @@
 
 //     &:last-child {
 //       color: #98BFBD;
-//       font-family: $nunito;
+//       font-family: $text;
 //       font-weight: 200;
 //       font-size: 16px;
 
@@ -262,14 +262,14 @@
 
 //   h2 {
 //     margin: 20px 0;
-//     font-family: $nunito;
+//     font-family: $text;
 //     font-weight: 700;
 //     color: #2B2E30;
 //     font-size: 16px;
 //   }
 
 //   p {
-//     font-family: $nunito;
+//     font-family: $text;
 //     font-weight: 200;
 //     color: #676A6C;
 //     font-size: 14px;
@@ -297,7 +297,7 @@
 //   padding: 0 30px;
 
 //   & h2 {
-//     font-family: $nunito;
+//     font-family: $text;
 //     font-weight: 200;
 //     color: #98BFBD;
 //     font-size: 16px;
@@ -335,7 +335,7 @@
 //     justify-content: space-between;
 
 //     h3 {
-//       font-family: $nunito;
+//       font-family: $text;
 //       font-weight: 600;
 //       color: #2B2E30;
 //       font-size: 16px;
@@ -346,7 +346,7 @@
 //     }
 
 //     p {
-//       font-family: $nunito;
+//       font-family: $text;
 //       font-weight: 300;
 //       color: #929292;
 //       font-size: 12px;
@@ -386,7 +386,7 @@
 //     top: 0;
 
 //     & h2 {
-//       font-family: $nunito;
+//       font-family: $text;
 //       font-weight: 700;
 //       color: #2B2E30;
 //       font-size: 18px;
@@ -413,7 +413,7 @@
 //     & h4 {
 //       text-transform: uppercase;
 //       font-size: 14px;
-//       font-family: $nunito;
+//       font-family: $text;
 //       font-weight: 200;
 //       color: #676A6C;
 //       // background-color: #E9E9EA;
@@ -423,7 +423,7 @@
 
 //     & h2 {
 //       font-size: 20px;
-//       font-family: $nunito;
+//       font-family: $text;
 //       font-weight: 700;
 //       color: #2B2E30;
 //       margin-bottom: 20px;
@@ -436,14 +436,14 @@
 //     & p {
 //      color: #676A6C;
 //      font-size: 17px;
-//      font-family: $nunito;
+//      font-family: $text;
 //      font-weight: 200;
 //     }
 
 //     & p:last-child {
 //       color: #676A6C;
 //       font-size: 14px;
-//       font-family: $nunito;
+//       font-family: $text;
 //       font-weight: 200;
 //       position: absolute;
 //         bottom: 10px;
@@ -516,7 +516,7 @@
 //   &_content {
 
 //     & h3 {
-//       font-family: $nunito;
+//       font-family: $text;
 //       font-weight: 700;
 //       color: #2B2E30;
 //       font-size: 16px;
@@ -527,13 +527,13 @@
 //     }
 
 //     & p:first-child {
-//       font-family: $nunito;
+//       font-family: $text;
 //       font-weight: 300;
 //       color: #2B2E30;
 //     }
 
 //     & p:last-child {
-//       font-family: $nunito;
+//       font-family: $text;
 //       font-weight: 200;
 //       color: #919191;
 //     }

@@ -2,7 +2,7 @@
 .home-hero-banner {
   background-image: linear-gradient(rgba(0,0,0,0.60)),url('https://images.pexels.com/photos/220769/pexels-photo-220769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-size: cover;
-  height: 650px;
+  height: 750px;
   width: 100%;
   padding: 0 40px;
   //orientation
@@ -17,11 +17,12 @@
     color: white;
     font-weight: 800;
     font-size: 80px;
+    font-family: $headers;
   }
 
   @include for-large-devices-down {
     & h3 {
-      width: 100vw;
+      width: 90vw;
       font-size: 75px;
     }
   }
@@ -62,6 +63,112 @@
 
   @include for-phone-only {
     width: 80vw;
+  }
+}
+
+.home-promotional-banner {
+  height: 464px;
+  width: 100%;
+  background-image: url('https://hoxtondigital.s3.eu-west-2.amazonaws.com/uploads/home-promotional-banner+background%402x.png');
+  background-size: cover;
+  padding: 64px 40px;
+
+  @include for-small-devices-down {
+    height: 554px;
+    padding: 50px 40px;
+  }
+}
+
+.home-promotional-banner-text {
+  height: 100%;
+  max-width: 1364px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  & span {
+    color: white;
+    border-radius: 5px;
+    background-color: red;
+    padding: 3px 15px;
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid white;
+  }
+
+  & h2 {
+    font-family: $headers;
+    color: white;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  & h3 {
+    font-family: $headers;
+    font-size: 36px;
+    color: white;
+    line-height: 48px;
+  }
+
+  & p {
+    color: white;
+    font-family: $text;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    width: 575px;
+  }
+
+  & a {
+    color: $primary-color;
+    background-color: white;
+    border-radius: 3px;
+    padding: 8px 35px;
+    font-size: 16px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+    font-weight: 300;
+    position: relative;
+
+
+    &:hover {
+      top: 1px;
+      text-decoration: none;
+      box-shadow: 3px 2px 10px rgba(0,0,0,0.3);
+    }
+  }
+
+  @include for-phone-only {
+
+    & p {
+      width: 80vw;
+    }
+
+    & h2 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    & h3 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  @include for-small-phone-only {
+    & p {
+      width: 80vw;
+    }
+
+    & h2 {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    & h3 {
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 }
 
@@ -228,7 +335,7 @@
       width: 100%;
 
       & span {
-        font-family: $nunito;
+        font-family: $text;
         color: $color-1;
         font-weight: 600;
       }
@@ -436,7 +543,7 @@
       font-weight: 700;
       line-height: 35px;
       margin: 20px 0;
-      font-family: $nunito;
+      font-family: $text;
       width: 100%;
       transition: 0.4s;
 
@@ -476,7 +583,7 @@
       width: 100%;
 
       & span {
-        font-family: $nunito;
+        font-family: $text;
         color: $color-1;
         font-weight: 600;
       }
@@ -677,7 +784,7 @@
       font-weight: 800;
       line-height: 45px;
       margin: 20px 0;
-      font-family: $nunito;
+      font-family: $text;
     }
 
     & h6 {
@@ -686,7 +793,7 @@
       font-weight: 200;
       line-height: 35px;
       margin: 20px 0;
-      font-family: $nunito;
+      font-family: $text;
       margin: 30px 0 20px 0;
     }
 
@@ -771,7 +878,7 @@
         text-align: center;
         line-height: 38px;
         color: #EEEDED;
-        font-family: $nunito;
+        font-family: $text;
         position: absolute;
           top: 90px;
         z-index: 1;
@@ -784,7 +891,7 @@
         text-align: center;
         line-height: 40px;
         color: #EEEDED;
-        font-family: $nunito;
+        font-family: $text;
         position: absolute;
           bottom: 50px;
         z-index: 1;
@@ -797,7 +904,7 @@
         text-align: center;
         line-height: 40px;
         color: #EEEDED;
-        font-family: $nunito;
+        font-family: $text;
         position: absolute;
           bottom: 20px;
         z-index: 1;
