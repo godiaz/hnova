@@ -24,6 +24,15 @@ class DesignsController < ApplicationController
     end
   end
 
+  def update
+
+    if @design.update(design_params)
+      redirect_to design_path(@design)
+    else
+      flash[:error] = 'Didn\'t save'
+    end
+  end
+
 
   def show
   end

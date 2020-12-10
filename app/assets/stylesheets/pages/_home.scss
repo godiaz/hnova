@@ -661,27 +661,22 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+    }
 
-      & button {
-        height: 40px;
-        border: none;
-        padding: 0px 20px;
-        border-radius: 3px;
-        font-weight: 300;
-        font-size: 14px;
-        color: #666F71;
-        background-color: $light-gray;
-        border: 1px solid #C8D4D7;
+    & button {
+      border-radius: 50px;
+      border: 1px solid #B6B6B6;
+      background-color: white;
+      color: #B6B6B6;
+      font-weight: 300;
+      font-size: 15px;
+      padding: 8px 20px;
+      transition: 0.5s;
 
-        &:hover {
-          border: 1px solid #7F888A;
-          transition: 0.2s;
-        }
-
-        &:focus {
-          outline: 0;
-          border: none;
-        }
+      &:hover {
+        border: 1px solid $color-1;
+        color: $color-1;
+        text-decoration: none;
       }
     }
 
@@ -1046,7 +1041,7 @@
 .home-bark {
   width: 100%;
   height: 600px;
-  background-color: #161E39;
+  background-image: linear-gradient($primary-color-dark,$primary-color);
   margin: 30px 0;
   display: flex;
   justify-content: space-between;
@@ -1075,7 +1070,7 @@
 
     & button {
       border: 1px white solid;
-      background-color: #161E39;
+      background-color: $primary-color;
       color: white;
       padding: 5px 30px;
       margin: 10px 0;
