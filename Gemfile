@@ -26,6 +26,7 @@ gem 'jquery-rails'
 gem 'friendly_id', '~> 5.2.4'
 # gem 'pry'
 # gem 'pry-rails'
+gem 'cookies_eu'
 
 # NEW GEMS
 gem 'cloudinary'
